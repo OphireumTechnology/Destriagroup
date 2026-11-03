@@ -26,6 +26,7 @@ import {
   ChevronDown,
   User
 } from 'lucide-react';
+import { assetUrl } from '../../utils/assetPath';
 
 import { OverviewTab } from './OverviewTab';
 import { EntitiesTab } from './EntitiesTab';
@@ -93,7 +94,7 @@ export const CommandCenterLayout: React.FC = () => {
 
               <div className="flex items-center gap-3">
                 <img
-                  src="/images/branding/destria-official-logo.png"
+                  src={assetUrl('/images/branding/destria-official-logo.png')}
                   alt="DESTRIA Logo"
                   referrerPolicy="no-referrer"
                   className="h-8 w-auto object-contain brightness-110"

@@ -25,6 +25,7 @@ import {
   Bot
 } from 'lucide-react';
 import { HeroAnimationCanvas } from './HeroAnimationCanvas';
+import { assetUrl } from '../../utils/assetPath';
 
 export const HomePage: React.FC<{ onOpenAuth: () => void }> = ({ onOpenAuth }) => {
   const { setPublicPage, entities, claims } = useEnterprise();
@@ -127,9 +128,9 @@ export const HomePage: React.FC<{ onOpenAuth: () => void }> = ({ onOpenAuth }) =
         {/* Background Architectural Artwork Layer */}
         <div className="absolute inset-0 z-0 pointer-events-none select-none">
           <picture>
-            <source srcSet="/images/corporate/hero_skyline_clean.png" type="image/png" />
+            <source srcSet={assetUrl('/images/corporate/hero_skyline_clean.png')} type="image/png" />
             <img
-              src="/images/corporate/hero_architecture.svg"
+              src={assetUrl('/images/corporate/hero_architecture.svg')}
               alt="DESTRIA GROUP Corporate Skyline"
               className="w-full h-full object-cover object-center sm:object-right opacity-90"
               loading="eager"
@@ -251,7 +252,7 @@ export const HomePage: React.FC<{ onOpenAuth: () => void }> = ({ onOpenAuth }) =
                   <div className="flex items-center justify-between pb-5 border-b border-white/10 gap-3">
                     <div className="flex items-center gap-3 min-w-0">
                       <img
-                        src="/images/branding/destria-official-logo.png"
+                        src={assetUrl('/images/branding/destria-official-logo.png')}
                         alt="DESTRIA GROUP INC. Official Logo"
                         referrerPolicy="no-referrer"
                         className="h-11 sm:h-12 w-auto object-contain brightness-110 drop-shadow-[0_2px_8px_rgba(197,164,109,0.3)] shrink-0"
@@ -386,7 +387,7 @@ export const HomePage: React.FC<{ onOpenAuth: () => void }> = ({ onOpenAuth }) =
               {/* Graphic Asset Embed */}
               <div className="aspect-[4/3] w-full flex items-center justify-center">
                 <img
-                  src="/images/corporate/ai_governance_network.svg"
+                  src={assetUrl('/images/corporate/ai_governance_network.svg')}
                   alt="AI Assisted Governance Network"
                   className="w-full h-auto object-contain max-h-64"
                 />

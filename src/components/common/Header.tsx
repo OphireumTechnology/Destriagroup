@@ -6,6 +6,7 @@
 import React, { useState } from 'react';
 import { useEnterprise } from '../../context/EnterpriseContext';
 import { ShieldCheck, Menu, X, ArrowUpRight } from 'lucide-react';
+import { assetUrl } from '../../utils/assetPath';
 
 interface HeaderProps {
   onOpenAuth: () => void;
@@ -40,7 +41,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAuth }) => {
             className="flex items-center gap-3 shrink-0 text-left focus:outline-none group cursor-pointer"
           >
             <img
-              src="/images/branding/destria-official-logo.png"
+              src={assetUrl('/images/branding/destria-official-logo.png')}
               alt="DESTRIA GROUP INC."
               referrerPolicy="no-referrer"
               className="h-10 w-auto object-contain transition-transform group-hover:scale-105"

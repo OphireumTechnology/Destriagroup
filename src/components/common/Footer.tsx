@@ -6,6 +6,7 @@
 import React from 'react';
 import { useEnterprise } from '../../context/EnterpriseContext';
 import { ShieldCheck, MapPin, Building2, Lock } from 'lucide-react';
+import { assetUrl } from '../../utils/assetPath';
 
 export const Footer: React.FC<{ onOpenAuth: () => void }> = ({ onOpenAuth }) => {
   const { setPublicPage } = useEnterprise();
@@ -21,7 +22,7 @@ export const Footer: React.FC<{ onOpenAuth: () => void }> = ({ onOpenAuth }) => 
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <img
-                src="/images/branding/destria-official-logo.png"
+                src={assetUrl('/images/branding/destria-official-logo.png')}
                 alt="DESTRIA GROUP INC."
                 referrerPolicy="no-referrer"
                 className="h-10 w-auto object-contain brightness-110"

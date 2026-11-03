@@ -16,6 +16,7 @@ import {
   UserCheck,
   CheckCircle2
 } from 'lucide-react';
+import { assetUrl } from '../../utils/assetPath';
 
 interface AuthModalProps {
   isOpen: boolean;
@@ -65,7 +66,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
 
           <div className="flex items-center gap-3 mb-2">
             <img
-              src="/images/branding/destria-official-logo.png"
+              src={assetUrl('/images/branding/destria-official-logo.png')}
               alt="DESTRIA Logo"
               referrerPolicy="no-referrer"
               className="h-8 w-auto object-contain brightness-110"

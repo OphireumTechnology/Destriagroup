@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs><linearGradient id="discBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#081220"/><stop offset="100%" stop-color="#0C192E"/></linearGradient></defs>
+  <rect width="800" height="480" rx="16" fill="url(#discBg)" stroke="#C5A46D" stroke-opacity="0.3" stroke-width="1.5"/>
+  <text x="50" y="45" fill="#C5A46D" font-size="10" font-weight="bold" letter-spacing="2" font-family="sans-serif">REGULATORY TRANSPARENCY</text>
+  <text x="50" y="70" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="sans-serif">Statutory Disclosures &amp; Compliance Audit Ledger</text>
+  <!-- Table Mockup -->
+  <g font-family="sans-serif" font-size="11">
+    <rect x="50" y="110" width="700" height="40" fill="#10223D" rx="6"/>
+    <text x="70" y="135" fill="#C5A46D" font-weight="bold">DISCLOSURE ID</text>
+    <text x="240" y="135" fill="#C5A46D" font-weight="bold">REGULATORY CLASS</text>
+    <text x="420" y="135" fill="#C5A46D" font-weight="bold">FILING JURISDICTION</text>
+    <text x="630" y="135" fill="#C5A46D" font-weight="bold">STATUS</text>
+
+    <rect x="50" y="160" width="700" height="45" fill="#0D1B30" rx="4"/>
+    <text x="70" y="187" fill="#FFFFFF">WY-SOS-2024-001</text>
+    <text x="240" y="187" fill="#94A3B8">Annual Charter Verification</text>
+    <text x="420" y="187" fill="#94A3B8">Wyoming Secretary of State</text>
+    <text x="630" y="187" fill="#10B981" font-weight="bold">VERIFIED ACTIVE</text>
+
+    <rect x="50" y="215" width="700" height="45" fill="#0B172A" rx="4"/>
+    <text x="70" y="242" fill="#FFFFFF">NAICS-551114-REC</text>
+    <text x="240" y="242" fill="#94A3B8">Managing Office Classification</text>
+    <text x="420" y="242" fill="#94A3B8">US Census / Regulatory</text>
+    <text x="630" y="242" fill="#10B981" font-weight="bold">COMPLIANT</text>
+
+    <rect x="50" y="270" width="700" height="45" fill="#0D1B30" rx="4"/>
+    <text x="70" y="297" fill="#FFFFFF">AUD-ETH-2024-Q3</text>
+    <text x="240" y="297" fill="#94A3B8">Fiduciary Multi-Tier Review</text>
+    <text x="420" y="297" fill="#94A3B8">Audit &amp; Risk Committee</text>
+    <text x="630" y="297" fill="#10B981" font-weight="bold">RATIFIED</text>
+  </g>
+</svg>

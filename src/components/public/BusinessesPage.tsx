@@ -16,6 +16,7 @@ import {
   Search,
   X
 } from 'lucide-react';
+import { assetUrl } from '../../utils/assetPath';
 
 export const BusinessesPage: React.FC = () => {
   const { entities } = useEnterprise();
@@ -53,6 +54,24 @@ export const BusinessesPage: React.FC = () => {
           <p className="mt-4 text-base text-slate-600 max-w-3xl leading-relaxed">
             DESTRIA GROUP INC. exercises controlling and majority ownership stakes across specialized operating subsidiaries in advanced manufacturing, renewable infrastructure, supply chain mobility, and private credit.
           </p>
+        </div>
+
+        {/* Capital Allocation & Subsidiary Oversight Diagram */}
+        <div className="bg-[#0A1628] p-4 sm:p-6 rounded-2xl border border-[#C5A46D]/30 shadow-lg overflow-hidden">
+          <div className="mb-4 flex items-center justify-between">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#C5A46D]">
+              Treasury Flow &amp; Enterprise Governance
+            </span>
+            <span className="text-[11px] font-mono text-cyan-400 bg-cyan-950/60 border border-cyan-800 px-2.5 py-0.5 rounded">
+              Controlled Allocation
+            </span>
+          </div>
+          <img
+            src={assetUrl('/images/corporate/businesses_capital_allocation.svg')}
+            alt="Subsidiary Capital Allocation Architecture"
+            className="w-full h-auto max-h-[440px] object-contain mx-auto"
+            loading="lazy"
+          />
         </div>
 
         {/* Filter Bar & Search */}

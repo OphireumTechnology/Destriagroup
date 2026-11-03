@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bizBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0A1424"/><stop offset="100%" stop-color="#0F1F38"/></linearGradient>
+    <linearGradient id="bizGold" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#C5A46D"/><stop offset="100%" stop-color="#DFCA9E"/></linearGradient>
+  </defs>
+  <rect width="800" height="480" rx="16" fill="url(#bizBg)" stroke="#C5A46D" stroke-opacity="0.3" stroke-width="1.5"/>
+  <!-- Central Treasury Hub -->
+  <circle cx="400" cy="140" r="55" fill="#10223D" stroke="url(#bizGold)" stroke-width="2.5"/>
+  <text x="400" y="135" fill="#C5A46D" font-size="11" font-weight="bold" text-anchor="middle" letter-spacing="1" font-family="sans-serif">CENTRALIZED</text>
+  <text x="400" y="152" fill="#FFFFFF" font-size="13" font-weight="bold" text-anchor="middle" font-family="sans-serif">TREASURY</text>
+  <!-- Orbiting Nodes -->
+  <path d="M 400 195 L 400 240 M 400 240 L 130 240 L 130 290 M 400 240 L 310 240 L 310 290 M 400 240 L 490 240 L 490 290 M 400 240 L 670 240 L 670 290" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <!-- 4 Operating Sector Boxes -->
+  <g font-family="sans-serif">
+    <rect x="50" y="290" width="160" height="130" rx="8" fill="#0D1A2E" stroke="#38BDF8" stroke-opacity="0.35" stroke-width="1"/>
+    <text x="130" y="320" fill="#C5A46D" font-size="10" font-weight="bold" text-anchor="middle">SECTOR 01</text>
+    <text x="130" y="340" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle">Advanced Mfg</text>
+    <text x="130" y="370" fill="#94A3B8" font-size="10" text-anchor="middle">Precision engineering &amp;</text>
+    <text x="130" y="385" fill="#94A3B8" font-size="10" text-anchor="middle">industrial robotics</text>
+
+    <rect x="230" y="290" width="160" height="130" rx="8" fill="#0D1A2E" stroke="#38BDF8" stroke-opacity="0.35" stroke-width="1"/>
+    <text x="310" y="320" fill="#C5A46D" font-size="10" font-weight="bold" text-anchor="middle">SECTOR 02</text>
+    <text x="310" y="340" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle">Energy Assets</text>
+    <text x="310" y="370" fill="#94A3B8" font-size="10" text-anchor="middle">Utility-scale solar &amp;</text>
+    <text x="310" y="385" fill="#94A3B8" font-size="10" text-anchor="middle">grid storage systems</text>
+
+    <rect x="410" y="290" width="160" height="130" rx="8" fill="#0D1A2E" stroke="#38BDF8" stroke-opacity="0.35" stroke-width="1"/>
+    <text x="490" y="320" fill="#C5A46D" font-size="10" font-weight="bold" text-anchor="middle">SECTOR 03</text>
+    <text x="490" y="340" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle">Freight Logistics</text>
+    <text x="490" y="370" fill="#94A3B8" font-size="10" text-anchor="middle">Cold-chain distribution</text>
+    <text x="490" y="385" fill="#94A3B8" font-size="10" text-anchor="middle">&amp; multimodal freight</text>
+
+    <rect x="590" y="290" width="160" height="130" rx="8" fill="#0D1A2E" stroke="#38BDF8" stroke-opacity="0.35" stroke-width="1"/>
+    <text x="670" y="320" fill="#C5A46D" font-size="10" font-weight="bold" text-anchor="middle">SECTOR 04</text>
+    <text x="670" y="340" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle">Private Credit</text>
+    <text x="670" y="370" fill="#94A3B8" font-size="10" text-anchor="middle">Asset-backed debt &amp;</text>
+    <text x="670" y="385" fill="#94A3B8" font-size="10" text-anchor="middle">equipment syndication</text>
+  </g>
+  <!-- Header Title -->
+  <text x="50" y="50" fill="#C5A46D" font-size="10" font-weight="bold" letter-spacing="2" font-family="sans-serif">CAPITAL STEWARDSHIP &amp; SUBSIDIARY GOVERNANCE</text>
+  <text x="50" y="75" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="sans-serif">Operating Subsidiary Capital Allocation Architecture</text>
+</svg>

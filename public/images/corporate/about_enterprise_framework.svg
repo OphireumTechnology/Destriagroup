@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="abBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A1628"/>
+      <stop offset="100%" stop-color="#101D35"/>
+    </linearGradient>
+    <linearGradient id="abGold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C5A46D"/>
+      <stop offset="100%" stop-color="#DFCA9E"/>
+    </linearGradient>
+    <filter id="abGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feComposite in="SourceGraphic" in2="b" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="800" height="500" rx="16" fill="url(#abBg)" stroke="#C5A46D" stroke-opacity="0.3" stroke-width="1.5"/>
+  <!-- Grid Background -->
+  <g opacity="0.15" stroke="#38BDF8" stroke-width="0.5">
+    <line x1="0" y1="100" x2="800" y2="100"/><line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/><line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="200" y1="0" x2="200" y2="500"/><line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+  </g>
+  <!-- Central Managing Office Node -->
+  <rect x="260" y="40" width="280" height="75" rx="10" fill="#0F223D" stroke="url(#abGold)" stroke-width="2" filter="url(#abGlow)"/>
+  <text x="400" y="72" fill="#FFFFFF" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">DESTRIA GROUP INC.</text>
+  <text x="400" y="92" fill="#C5A46D" font-size="10" font-weight="bold" text-anchor="middle" letter-spacing="1.5" font-family="sans-serif">EXECUTIVE MANAGING OFFICE · NAICS 551114</text>
+  
+  <!-- Conduit Lines -->
+  <path d="M 400 115 L 400 170 M 400 170 L 150 170 L 150 220 M 400 170 L 400 220 M 400 170 L 650 170 L 650 220" fill="none" stroke="#38BDF8" stroke-width="2" stroke-dasharray="6,4"/>
+  
+  <!-- Core Functional Pillars -->
+  <!-- Pillar 1 -->
+  <rect x="50" y="220" width="200" height="110" rx="8" fill="#0C192E" stroke="#38BDF8" stroke-opacity="0.4" stroke-width="1.5"/>
+  <circle cx="80" cy="250" r="12" fill="#1E3A5F" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="80" y="254" fill="#38BDF8" font-size="11" font-weight="bold" text-anchor="middle">01</text>
+  <text x="105" y="254" fill="#FFFFFF" font-size="12" font-weight="bold" font-family="sans-serif">Capital Allocation</text>
+  <text x="65" y="285" fill="#94A3B8" font-size="10" font-family="sans-serif">Centralized treasury, equity</text>
+  <text x="65" y="300" fill="#94A3B8" font-size="10" font-family="sans-serif">infusions &amp; debt liquidity</text>
+
+  <!-- Pillar 2 -->
+  <rect x="300" y="220" width="200" height="110" rx="8" fill="#0C192E" stroke="url(#abGold)" stroke-width="1.5"/>
+  <circle cx="330" cy="250" r="12" fill="#1E3A5F" stroke="#C5A46D" stroke-width="1.5"/>
+  <text x="330" y="254" fill="#C5A46D" font-size="11" font-weight="bold" text-anchor="middle">02</text>
+  <text x="355" y="254" fill="#FFFFFF" font-size="12" font-weight="bold" font-family="sans-serif">Fiduciary Oversight</text>
+  <text x="315" y="285" fill="#94A3B8" font-size="10" font-family="sans-serif">Multi-tiered human governance</text>
+  <text x="315" y="300" fill="#94A3B8" font-size="10" font-family="sans-serif">&amp; dual-signature mandates</text>
+
+  <!-- Pillar 3 -->
+  <rect x="550" y="220" width="200" height="110" rx="8" fill="#0C192E" stroke="#38BDF8" stroke-opacity="0.4" stroke-width="1.5"/>
+  <circle cx="580" cy="250" r="12" fill="#1E3A5F" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="580" y="254" fill="#38BDF8" font-size="11" font-weight="bold" text-anchor="middle">03</text>
+  <text x="605" y="254" fill="#FFFFFF" font-size="12" font-weight="bold" font-family="sans-serif">Decision Support AI</text>
+  <text x="565" y="285" fill="#94A3B8" font-size="10" font-family="sans-serif">Continuous telemetry, risk</text>
+  <text x="565" y="300" fill="#94A3B8" font-size="10" font-family="sans-serif">audits &amp; enterprise tracking</text>
+
+  <!-- Bottom Statutory Foundation Bar -->
+  <rect x="50" y="380" width="700" height="75" rx="8" fill="#081220" stroke="#C5A46D" stroke-opacity="0.3" stroke-width="1"/>
+  <circle cx="80" cy="417" r="10" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1.5"/>
+  <text x="80" y="421" fill="#10B981" font-size="12" font-weight="bold" text-anchor="middle">✓</text>
+  <text x="105" y="412" fill="#FFFFFF" font-size="11" font-weight="bold" font-family="sans-serif">Statutory Wyoming Charter #WY-2024-001482910 · Fiduciary Good Standing</text>
+  <text x="105" y="432" fill="#C5A46D" font-size="10" font-family="sans-serif">Corporate Domicile: 30 N Gould Street Ste N, Sheridan, WY 82801, USA · NAICS Classification: 551114</text>
+</svg>

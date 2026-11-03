@@ -13,6 +13,7 @@ import {
   Globe2,
   TrendingUp
 } from 'lucide-react';
+import { assetUrl } from '../../utils/assetPath';
 
 export const PartnershipsPage: React.FC = () => {
   const [partnerType, setPartnerType] = useState('equity');
@@ -55,6 +56,24 @@ export const PartnershipsPage: React.FC = () => {
           <p className="mt-4 text-base text-slate-600 max-w-3xl leading-relaxed">
             DESTRIA GROUP INC. structures high-conviction joint ventures and institutional co-investments alongside global sovereign entities, Tier-1 industrial conglomerates, and regulated infrastructure funds.
           </p>
+        </div>
+
+        {/* Global Syndicate Visual Diagram */}
+        <div className="bg-[#081426] p-4 sm:p-6 rounded-2xl border border-[#C5A46D]/30 shadow-lg overflow-hidden">
+          <div className="mb-4 flex items-center justify-between">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#C5A46D]">
+              Global Co-Investment Corridors
+            </span>
+            <span className="text-[11px] font-mono text-cyan-400 bg-cyan-950/60 border border-cyan-800 px-2.5 py-0.5 rounded">
+              Tier-1 Clearing Network
+            </span>
+          </div>
+          <img
+            src={assetUrl('/images/corporate/partnerships_enterprise_syndicate.svg')}
+            alt="Strategic Alliances and Syndicate Network"
+            className="w-full h-auto max-h-[440px] object-contain mx-auto"
+            loading="lazy"
+          />
         </div>
 
         {/* Alliance Categories */}

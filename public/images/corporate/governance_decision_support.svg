@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="govBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#081220"/><stop offset="100%" stop-color="#0E1E36"/></linearGradient>
+    <linearGradient id="govGold" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#C5A46D"/><stop offset="100%" stop-color="#DFCA9E"/></linearGradient>
+  </defs>
+  <rect width="800" height="480" rx="16" fill="url(#govBg)" stroke="#C5A46D" stroke-opacity="0.3" stroke-width="1.5"/>
+  <!-- Header Title -->
+  <text x="50" y="45" fill="#C5A46D" font-size="10" font-weight="bold" letter-spacing="2" font-family="sans-serif">FIDUCIARY INTEGRITY PROTOCOL</text>
+  <text x="50" y="70" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="sans-serif">AI-Assisted Governance &amp; Dual-Authorization Matrix</text>
+
+  <!-- Flow Steps -->
+  <g font-family="sans-serif">
+    <!-- Step 1: AI Decision Support -->
+    <rect x="50" y="110" width="200" height="220" rx="10" fill="#0C1A2E" stroke="#38BDF8" stroke-width="1.5"/>
+    <text x="150" y="145" fill="#38BDF8" font-size="11" font-weight="bold" text-anchor="middle">TIER 01 · DATA SYNTHESIS</text>
+    <text x="150" y="170" fill="#FFFFFF" font-size="14" font-weight="bold" text-anchor="middle">AI Decision Support</text>
+    <text x="70" y="210" fill="#94A3B8" font-size="11">• Continuous risk telemetry</text>
+    <text x="70" y="235" fill="#94A3B8" font-size="11">• Subsidiary audit collation</text>
+    <text x="70" y="260" fill="#94A3B8" font-size="11">• Capital allocation modeling</text>
+    <text x="70" y="285" fill="#94A3B8" font-size="11">• Regulatory watch tracking</text>
+    <rect x="70" y="305" width="160" height="18" rx="4" fill="#1E3A5F"/>
+    <text x="150" y="318" fill="#38BDF8" font-size="9" font-weight="bold" text-anchor="middle">NON-AUTONOMOUS CONSTRAINT</text>
+
+    <!-- Arrow 1 -->
+    <path d="M 250 220 L 295 220" stroke="#C5A46D" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Step 2: Officer Review -->
+    <rect x="300" y="110" width="200" height="220" rx="10" fill="#0C1A2E" stroke="url(#govGold)" stroke-width="1.5"/>
+    <text x="400" y="145" fill="#C5A46D" font-size="11" font-weight="bold" text-anchor="middle">TIER 02 · FIDUCIARY REVIEW</text>
+    <text x="400" y="170" fill="#FFFFFF" font-size="14" font-weight="bold" text-anchor="middle">Human Officer Oversight</text>
+    <text x="320" y="210" fill="#94A3B8" font-size="11">• Legal counsel verification</text>
+    <text x="320" y="235" fill="#94A3B8" font-size="11">• Dual-signature signoff</text>
+    <text x="320" y="260" fill="#94A3B8" font-size="11">• Fiduciary ethics review</text>
+    <text x="320" y="285" fill="#94A3B8" font-size="11">• Board committee escalation</text>
+    <rect x="320" y="305" width="160" height="18" rx="4" fill="#362B16"/>
+    <text x="400" y="318" fill="#DFCA9E" font-size="9" font-weight="bold" text-anchor="middle">HUMAN FOCAL AUTHORITY</text>
+
+    <!-- Arrow 2 -->
+    <path d="M 500 220 L 545 220" stroke="#10B981" stroke-width="2"/>
+
+    <!-- Step 3: Tamper-Evident Ledger -->
+    <rect x="550" y="110" width="200" height="220" rx="10" fill="#0C1A2E" stroke="#10B981" stroke-width="1.5"/>
+    <text x="650" y="145" fill="#10B981" font-size="11" font-weight="bold" text-anchor="middle">TIER 03 · AUDITABILITY</text>
+    <text x="650" y="170" fill="#FFFFFF" font-size="14" font-weight="bold" text-anchor="middle">Immutable Audit Record</text>
+    <text x="570" y="210" fill="#94A3B8" font-size="11">• Cryptographic event hashes</text>
+    <text x="570" y="235" fill="#94A3B8" font-size="11">• Wyoming compliance archive</text>
+    <text x="570" y="260" fill="#94A3B8" font-size="11">• SEC / State disclosure link</text>
+    <text x="570" y="285" fill="#94A3B8" font-size="11">• Continuous audit trail</text>
+    <rect x="570" y="305" width="160" height="18" rx="4" fill="#0E3326"/>
+    <text x="650" y="318" fill="#10B981" font-size="9" font-weight="bold" text-anchor="middle">AUDIT RECORD COMMITTED</text>
+  </g>
+
+  <!-- Bottom Notice -->
+  <rect x="50" y="365" width="700" height="80" rx="8" fill="#081220" stroke="#C5A46D" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="80" y="400" fill="#C5A46D" font-size="11" font-weight="bold" font-family="sans-serif">MANDATORY FIDUCIARY STATUTORY CONSTRAINT:</text>
+  <text x="80" y="422" fill="#94A3B8" font-size="10" font-family="sans-serif">Artificial Intelligence operates strictly as a decision-support and telemetry collation tool. Under no circumstances does AI possess autonomous disbursement, contracting, or binding corporate authority without human countersignature.</text>
+</svg>

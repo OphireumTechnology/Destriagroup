@@ -14,6 +14,7 @@ import {
   Scale
 } from 'lucide-react';
 import { ENTERPRISE_USERS } from '../../data/corporateStore';
+import { assetUrl } from '../../utils/assetPath';
 
 export const AboutPage: React.FC = () => {
   const { setPublicPage } = useEnterprise();
@@ -78,16 +79,18 @@ export const AboutPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-5 bg-[#101D35] text-white p-8 rounded-lg border border-[#C5A46D]/40 space-y-6">
-            <h3 className="text-sm font-bold uppercase tracking-widest text-[#C5A46D]">
+          <div className="lg:col-span-5 bg-gradient-to-br from-[#F8FAFC] to-[#F1F5F9] text-[#101D35] p-8 rounded-xl border border-slate-200 shadow-sm space-y-6 relative overflow-hidden">
+            <div className="h-1 w-full bg-gradient-to-r from-[#9E7D47] via-[#DFCA9E] to-[#C5A46D] absolute top-0 left-0 right-0" />
+
+            <h3 className="text-xs font-bold uppercase tracking-widest text-[#9E7D47]">
               Corporate Domicile Details
             </h3>
 
-            <div className="space-y-4 text-xs text-slate-300">
+            <div className="space-y-4 text-xs text-slate-600">
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[#C5A46D] shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white block">Corporate Headquarters:</strong>
+                  <strong className="text-[#101D35] block font-semibold">Corporate Headquarters:</strong>
                   30 N Gould Street Ste N, Sheridan, WY 82801, USA
                 </div>
               </div>
@@ -95,7 +98,7 @@ export const AboutPage: React.FC = () => {
               <div className="flex items-start gap-3">
                 <Building2 className="w-4 h-4 text-[#C5A46D] shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white block">Corporate Structure:</strong>
+                  <strong className="text-[#101D35] block font-semibold">Corporate Structure:</strong>
                   Domestic For-Profit Corporation under Wyoming Business Corporation Act
                 </div>
               </div>
@@ -103,7 +106,7 @@ export const AboutPage: React.FC = () => {
               <div className="flex items-start gap-3">
                 <Scale className="w-4 h-4 text-[#C5A46D] shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white block">Supervisory Regime:</strong>
+                  <strong className="text-[#101D35] block font-semibold">Supervisory Regime:</strong>
                   Wyoming Secretary of State Commercial Division, IRS Federal Corporate Tax Filing
                 </div>
               </div>
@@ -111,20 +114,46 @@ export const AboutPage: React.FC = () => {
               <div className="flex items-start gap-3">
                 <ShieldCheck className="w-4 h-4 text-[#C5A46D] shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white block">Statutory Agent of Record:</strong>
+                  <strong className="text-[#101D35] block font-semibold">Statutory Agent of Record:</strong>
                   Registered Agents Inc. (Sheridan, WY)
                 </div>
               </div>
             </div>
 
-            <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-slate-400">
+            <div className="pt-4 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500">
               <span>Incorporated: January 14, 2024</span>
-              <span className="text-emerald-400 font-mono flex items-center gap-1">
-                <CheckCircle2 className="w-3.5 h-3.5" /> Good Standing
+              <span className="text-emerald-700 font-mono font-semibold flex items-center gap-1 bg-emerald-50 px-2 py-0.5 rounded">
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> Good Standing
               </span>
             </div>
           </div>
 
+        </div>
+
+        {/* Institutional Architecture Visual Diagram */}
+        <div className="space-y-6 pt-4">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-widest text-[#C5A46D] block mb-1">
+                Enterprise Blueprint
+              </span>
+              <h2 className="text-2xl font-bold text-[#101D35] tracking-tight">
+                Institutional Holding &amp; Governance Architecture
+              </h2>
+            </div>
+            <span className="text-xs font-mono text-slate-500 bg-slate-100 px-3 py-1 rounded">
+              NAICS 551114 Managing Framework
+            </span>
+          </div>
+
+          <div className="bg-[#0A1628] p-4 sm:p-6 rounded-2xl border border-[#C5A46D]/30 shadow-lg overflow-hidden">
+            <img
+              src={assetUrl('/images/corporate/about_enterprise_framework.svg')}
+              alt="DESTRIA GROUP Institutional Enterprise Framework"
+              className="w-full h-auto max-h-[460px] object-contain mx-auto"
+              loading="lazy"
+            />
+          </div>
         </div>
 
         {/* Executive Committee */}

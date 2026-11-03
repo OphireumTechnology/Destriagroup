@@ -15,6 +15,7 @@ import {
   Award
 } from 'lucide-react';
 import { BoardResolution } from '../../types';
+import { assetUrl } from '../../utils/assetPath';
 
 export const GovernancePage: React.FC = () => {
   const { resolutions } = useEnterprise();
@@ -78,6 +79,32 @@ export const GovernancePage: React.FC = () => {
             </p>
           </div>
 
+        </div>
+
+        {/* Fiduciary Integrity Protocol Visual Diagram */}
+        <div className="space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-widest text-[#C5A46D] block mb-1">
+                Fiduciary Protocol Architecture
+              </span>
+              <h2 className="text-2xl font-bold text-[#101D35] tracking-tight">
+                AI-Assisted Governance &amp; Dual-Authorization Matrix
+              </h2>
+            </div>
+            <span className="text-xs font-mono text-cyan-400 bg-cyan-950/70 border border-cyan-800 px-3 py-1 rounded">
+              Human-in-the-Loop Constraint
+            </span>
+          </div>
+
+          <div className="bg-[#081220] p-4 sm:p-6 rounded-2xl border border-[#C5A46D]/30 shadow-lg overflow-hidden">
+            <img
+              src={assetUrl('/images/corporate/governance_decision_support.svg')}
+              alt="AI-Assisted Governance & Dual-Authorization Matrix"
+              className="w-full h-auto max-h-[460px] object-contain mx-auto"
+              loading="lazy"
+            />
+          </div>
         </div>
 
         {/* Public Disclosed Resolutions */}

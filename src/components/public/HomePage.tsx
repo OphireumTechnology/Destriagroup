@@ -121,40 +121,37 @@ export const HomePage: React.FC<{ onOpenAuth: () => void }> = ({ onOpenAuth }) =
     <div className="bg-white">
       
       {/* ========================================================================= */}
-      {/* 1. HOMEPAGE HERO: Approved Corporate Skyline Composition + Live Animation */}
+      {/* 1. HOMEPAGE HERO: Clean Architectural Corporate Composition + Animation    */}
       {/* ========================================================================= */}
-      <section className="relative overflow-hidden bg-[#0A1220] text-white border-b border-[#C5A46D]/30 min-h-[720px] flex items-center">
+      <section className="relative overflow-hidden bg-[#0A1424] text-white border-b border-[#C5A46D]/30 min-h-[640px] lg:min-h-[720px] flex items-center">
         
-        {/* Background Architectural Artwork Layer */}
+        {/* Background Architectural Artwork Layer (Clean, Unobscured by Duplicate Content) */}
         <div className="absolute inset-0 z-0 pointer-events-none select-none">
           <picture>
-            <source srcSet={assetUrl('/images/corporate/hero_skyline_clean.png')} type="image/png" />
+            <source srcSet={assetUrl('/images/corporate/destria_corporate_hero_clean.png')} type="image/png" />
             <img
               src={assetUrl('/images/corporate/hero_architecture.svg')}
               alt="DESTRIA GROUP Corporate Skyline"
-              className="w-full h-full object-cover object-center sm:object-right opacity-90"
+              className="w-full h-full object-cover object-center lg:object-right brightness-105 contrast-105"
               loading="eager"
             />
           </picture>
           
-          {/* Subtle Ambient Vignettes for Contrast and Scrim */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#061224]/95 via-[#0A1932]/80 to-transparent lg:w-[65%]" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0A1220] via-transparent to-transparent opacity-80" />
+          {/* Localized subtle directional scrim strictly behind text column for optimal contrast */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#091527]/90 via-[#091527]/40 to-transparent lg:w-[48%]" />
         </div>
 
         {/* Real-Time Continuous Technological Animation Canvas */}
         <HeroAnimationCanvas />
 
-        {/* Content Container (Two-Column Desktop Layout) */}
-        <div className="relative z-20 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
+        {/* Hero Content Container (Max width: 1360px per Phase 2 directive) */}
+        <div className="relative z-20 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
-            {/* ------------------------------------------------------------- */}
-            {/* LEFT COLUMN: Corporate Positioning (55% desktop width)        */}
-            {/* ------------------------------------------------------------- */}
-            <div className="lg:col-span-7 min-w-0 w-full space-y-5 sm:space-y-6">
+            {/* Left Column (50% desktop width): Exactly one clean instance of corporate headline & description */}
+            <div className="lg:col-span-7 xl:col-span-6 min-w-0 w-full space-y-6">
               
-              {/* Institutional Kicker (Zero-pill clean typography) */}
+              {/* Institutional Kicker */}
               <div className="flex flex-wrap items-center gap-2 text-[11px] sm:text-xs font-semibold tracking-wider text-slate-300 uppercase">
                 <span className="text-white font-bold">DESTRIA GROUP INC.</span>
                 <span aria-hidden="true" className="text-[#C5A46D]">·</span>
@@ -163,64 +160,27 @@ export const HomePage: React.FC<{ onOpenAuth: () => void }> = ({ onOpenAuth }) =
                 <span>SHERIDAN, WYOMING</span>
               </div>
 
-              {/* Main Heading (Explicitly two lines on desktop, zero overlap) */}
-              <h1 className="text-[clamp(2.25rem,3.8vw,3.75rem)] font-extrabold tracking-[-0.035em] text-white leading-[1.08] text-left">
-                <span className="block text-white">A Diversified</span>
-                <span className="block gold-gradient-text">Holding Corporation</span>
+              {/* Main Heading (Strictly two lines on desktop, zero overlap) */}
+              <h1 className="text-[clamp(2.25rem,3.4vw,3.5rem)] font-extrabold tracking-[-0.03em] text-white leading-[1.1] text-left">
+                <span className="block text-white sm:whitespace-nowrap">A Diversified</span>
+                <span className="block gold-gradient-text sm:whitespace-nowrap">Holding Corporation</span>
               </h1>
 
               {/* Supporting Text */}
-              <p className="text-sm sm:text-base text-slate-200 font-normal leading-relaxed max-w-2xl">
-                Building, managing, and growing strategic enterprises for a sustainable future. Exercising rigorous centralized oversight, capital allocation, and governance across specialized operating subsidiaries.
+              <p className="text-base sm:text-lg text-slate-200 font-normal leading-relaxed max-w-xl">
+                Building, managing, and growing strategic enterprises through disciplined capital management, technology innovation, and responsible corporate governance.
               </p>
 
-              {/* Five Minimalist Capability Indicators */}
-              <div className="pt-1">
-                <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-2.5">
-                  {capabilityIndicators.map(indicator => {
-                    const Icon = indicator.icon;
-                    return (
-                      <div
-                        key={indicator.id}
-                        className="p-3 bg-black/45 backdrop-blur-md border border-[#C5A46D]/35 rounded-lg hover:border-[#C5A46D] transition-all group cursor-default shadow-sm h-full flex flex-col justify-start"
-                      >
-                        <div className="w-7 h-7 sm:w-8 sm:h-8 rounded bg-[#101D35]/90 border border-[#C5A46D]/60 text-[#C5A46D] flex items-center justify-center mb-2.5 shrink-0 group-hover:scale-105 transition-transform shadow-sm">
-                          <Icon className="w-4 h-4 stroke-[1.75]" />
-                        </div>
-                        <span className="text-xs font-bold text-white block leading-snug group-hover:text-[#DFCA9E] transition-colors">
-                          {indicator.title}
-                        </span>
-                        <span className="text-[10.5px] text-slate-300 block mt-1 leading-tight">
-                          {indicator.detail}
-                        </span>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {/* Verified Institutional Classification Card */}
-              <div className="p-3 sm:p-3.5 bg-black/45 backdrop-blur-md border border-white/15 rounded-lg max-w-2xl">
-                <div className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-[#C5A46D]/20 border border-[#C5A46D] flex items-center justify-center shrink-0 mt-0.5">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#C5A46D]" />
-                  </div>
-                  <div className="text-xs text-slate-200 leading-relaxed">
-                    <strong className="text-white font-semibold">Verified Institutional Classification:</strong> Registered with the Wyoming Secretary of State as a domestic managing holding entity (Charter #WY-2024-001482910). Governed by multi-tiered dual-authorization and tamper-evident audit protocols.
-                  </div>
-                </div>
-              </div>
-
-              {/* Primary Action Buttons */}
+              {/* Exactly Two Action Buttons */}
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <button
                   onClick={() => {
                     setPublicPage('businesses');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
-                  className="flex items-center gap-2 px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-[#101D35] bg-[#C5A46D] hover:bg-[#DFCA9E] rounded transition-all shadow-md cursor-pointer whitespace-nowrap"
+                  className="flex items-center gap-2 px-7 py-3.5 text-xs font-bold uppercase tracking-wider text-[#101D35] bg-[#C5A46D] hover:bg-[#DFCA9E] rounded transition-all shadow-md cursor-pointer whitespace-nowrap"
                 >
-                  Explore Operating Companies
+                  Explore Our Businesses
                   <ArrowRight className="w-4 h-4 text-[#101D35]" />
                 </button>
 
@@ -229,7 +189,7 @@ export const HomePage: React.FC<{ onOpenAuth: () => void }> = ({ onOpenAuth }) =
                     setPublicPage('governance');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
-                  className="px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-white hover:text-[#C5A46D] bg-[#101D35]/80 hover:bg-[#101D35] border border-white/30 hover:border-[#C5A46D] rounded transition-all cursor-pointer whitespace-nowrap backdrop-blur-sm"
+                  className="px-7 py-3.5 text-xs font-bold uppercase tracking-wider text-white hover:text-[#C5A46D] bg-[#101D35]/80 hover:bg-[#101D35] border border-white/30 hover:border-[#C5A46D] rounded transition-all cursor-pointer whitespace-nowrap backdrop-blur-sm"
                 >
                   Corporate Governance
                 </button>
@@ -237,116 +197,186 @@ export const HomePage: React.FC<{ onOpenAuth: () => void }> = ({ onOpenAuth }) =
 
             </div>
 
-            {/* ------------------------------------------------------------- */}
-            {/* RIGHT COLUMN: Corporate Identity Panel (45% desktop width)     */}
-            {/* ------------------------------------------------------------- */}
-            <div className="lg:col-span-5 min-w-0 w-full">
-              <div className="bg-[#101D35]/95 backdrop-blur-md text-white rounded-xl shadow-2xl border border-[#C5A46D]/50 relative overflow-hidden">
-                
-                {/* Thin Metallic-Gold Upper Border */}
-                <div className="h-1.5 w-full bg-gradient-to-r from-[#9E7D47] via-[#DFCA9E] to-[#C5A46D]" />
-
-                <div className="p-6 sm:p-8 space-y-5">
-                  
-                  {/* Top Branding Lockup with Transparent Official Logo */}
-                  <div className="flex items-center justify-between pb-5 border-b border-white/10 gap-3">
-                    <div className="flex items-center gap-3 min-w-0">
-                      <img
-                        src={assetUrl('/images/branding/destria-official-logo.png')}
-                        alt="DESTRIA GROUP INC. Official Logo"
-                        referrerPolicy="no-referrer"
-                        className="h-11 sm:h-12 w-auto object-contain brightness-110 drop-shadow-[0_2px_8px_rgba(197,164,109,0.3)] shrink-0"
-                      />
-                      <div className="min-w-0">
-                        <span className="font-extrabold text-sm tracking-tight text-white block leading-tight truncate">
-                          DESTRIA GROUP INC.
-                        </span>
-                        <span className="text-[10px] tracking-widest text-[#C5A46D] uppercase font-semibold block truncate">
-                          Executive Managing Office
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="text-right pl-3 sm:pl-4 border-l border-white/10 shrink-0">
-                      <span className="text-[9px] uppercase tracking-widest text-slate-400 block font-semibold">
-                        INCORPORATION STATE
-                      </span>
-                      <span className="text-xs font-bold text-white tracking-wide">
-                        Wyoming, USA
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Corporate Attributes */}
-                  <div className="space-y-4 text-xs">
-                    
-                    <div>
-                      <span className="text-[10px] font-bold uppercase text-[#C5A46D] tracking-wider block mb-1">
-                        STATUTORY EXECUTIVE MANDATE
-                      </span>
-                      <p className="text-xs text-slate-300 leading-relaxed font-light">
-                        DESTRIA GROUP INC. serves exclusively as the parent enterprise management organization under NAICS Code 551114, directing capitalization policies, compliance verifications, and board-level fiduciary oversight for all controlled operational units.
-                      </p>
-                    </div>
-
-                    {/* Verified Statutory Cards (Accurate Corporate Records — No Unverified Assets) */}
-                    <div className="grid grid-cols-2 gap-3 pt-1">
-                      <div className="p-3 bg-white/[0.04] rounded border border-white/10 space-y-0.5">
-                        <span className="text-[9px] font-bold uppercase text-slate-400 tracking-wider block">
-                          STATUTORY JURISDICTION
-                        </span>
-                        <span className="text-xs font-bold text-white block font-mono">
-                          Wyoming, USA
-                        </span>
-                        <span className="text-[10px] text-[#C5A46D]">
-                          NAICS 551114 Managing
-                        </span>
-                      </div>
-
-                      <div className="p-3 bg-white/[0.04] rounded border border-white/10 space-y-0.5">
-                        <span className="text-[9px] font-bold uppercase text-slate-400 tracking-wider block">
-                          SECRETARY OF STATE RECORD
-                        </span>
-                        <span className="text-xs font-bold text-emerald-400 block font-mono">
-                          WY-2024-001482910
-                        </span>
-                        <span className="text-[10px] text-emerald-300">
-                          Active &amp; Good Standing
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Domicile Note */}
-                    <div className="text-[11px] text-slate-300 flex items-center justify-between pt-1">
-                      <span>Seat: 30 N Gould St Ste N, Sheridan, WY</span>
-                      <span className="text-slate-400 font-mono">82801 USA</span>
-                    </div>
-
-                    {/* Corporate Principle Quote */}
-                    <div className="pt-2 text-center text-xs text-[#DFCA9E] font-semibold italic tracking-wide">
-                      “Strength in Foundation. Excellence in Growth.”
-                    </div>
-                  </div>
-
-                  {/* Portal Navigation Action */}
-                  <div className="pt-3 border-t border-white/10">
-                    <button
-                      onClick={onOpenAuth}
-                      className="w-full flex items-center justify-center gap-2 py-3 px-4 text-xs font-bold uppercase tracking-wider text-white bg-[#1A2E50] hover:bg-[#233C66] border border-[#C5A46D]/60 rounded transition-all cursor-pointer shadow-sm group"
-                    >
-                      <Lock className="w-3.5 h-3.5 text-[#C5A46D] group-hover:scale-110 transition-transform" />
-                      <span>Enterprise Portal Access →</span>
-                    </button>
-                  </div>
-
-                </div>
-
-              </div>
-            </div>
+            {/* Right Column (50% desktop width): Unobstructed architectural imagery & live connectivity */}
+            <div className="hidden lg:block lg:col-span-5 xl:col-span-6" />
 
           </div>
         </div>
 
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 2. DEDICATED SECTION: Our Strategic Foundations (Phase 6 Directive)       */}
+      {/* ========================================================================= */}
+      <section className="py-16 md:py-20 bg-[#F8FAFC] border-b border-slate-200">
+        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+          
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-widest text-[#C5A46D] block mb-2">
+                Core Enterprise Pillars
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#101D35] tracking-tight">
+                Our Strategic Foundations
+              </h2>
+              <p className="mt-2 text-sm text-slate-600 max-w-2xl leading-relaxed">
+                Centralized executive oversight and operational enablement deployed across our operating enterprise network.
+              </p>
+            </div>
+            
+            {/* Verified Institutional Classification Badge */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-2 bg-white rounded-lg border border-slate-200 shadow-xs text-xs text-slate-700 shrink-0">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+              <span>Charter #WY-2024-001482910 · Good Standing</span>
+            </div>
+          </div>
+
+          {/* 5 Clean Capability Cards with Consistent Dimensions */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+            {capabilityIndicators.map(indicator => {
+              const Icon = indicator.icon;
+              return (
+                <div
+                  key={indicator.id}
+                  className="p-5 bg-white border border-slate-200 hover:border-[#C5A46D] rounded-xl transition-all shadow-xs hover:shadow-md group flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="w-10 h-10 rounded-lg bg-[#101D35] text-[#C5A46D] flex items-center justify-center mb-4 group-hover:scale-105 transition-transform shadow-xs">
+                      <Icon className="w-5 h-5 stroke-[1.75]" />
+                    </div>
+                    <h3 className="text-sm font-bold text-[#101D35] block leading-snug group-hover:text-[#9E7D47] transition-colors mb-2">
+                      {indicator.title}
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      {indicator.detail}
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400 font-semibold">
+                    <span>Institutional</span>
+                    <span className="text-[#C5A46D]">→</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. DEDICATED SECTION: Corporate Profile & Institutional Foundation (Phase 5) */}
+      {/* ========================================================================= */}
+      <section className="py-16 bg-white border-b border-slate-200">
+        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#C5A46D] block mb-1">
+              Verified Corporate Records
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#101D35] tracking-tight">
+              Corporate Profile &amp; Institutional Foundation
+            </h2>
+          </div>
+
+          <div className="bg-gradient-to-br from-[#F8FAFC] to-[#F1F5F9] rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+            {/* Top Metallic Gold Accent Bar */}
+            <div className="h-1.5 w-full bg-gradient-to-r from-[#9E7D47] via-[#DFCA9E] to-[#C5A46D]" />
+
+            <div className="p-8 sm:p-10 lg:p-12">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                
+                {/* Left Side: Corporate Seal and Mandate */}
+                <div className="lg:col-span-7 space-y-6">
+                  <div className="flex items-center gap-4">
+                    <img
+                      src={assetUrl('/images/branding/destria-official-logo.png')}
+                      alt="DESTRIA GROUP INC. Official Logo"
+                      referrerPolicy="no-referrer"
+                      className="h-14 w-auto object-contain shrink-0"
+                    />
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-extrabold text-[#101D35] tracking-tight">
+                        DESTRIA GROUP INC.
+                      </h3>
+                      <span className="text-xs font-bold tracking-widest text-[#C5A46D] uppercase block">
+                        Executive Managing Office · NAICS 551114
+                      </span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <span className="text-[11px] font-bold uppercase text-[#C5A46D] tracking-wider block mb-1">
+                      Statutory Executive Mandate
+                    </span>
+                    <p className="text-sm text-slate-700 leading-relaxed">
+                      DESTRIA GROUP INC. serves exclusively as the parent enterprise management organization under NAICS Code 551114, directing capitalization policies, compliance verifications, and board-level fiduciary oversight for all controlled operational units.
+                    </p>
+                  </div>
+
+                  <div className="p-4 bg-white rounded-lg border border-slate-200 flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                    <p className="text-xs text-slate-700 leading-relaxed">
+                      <strong>Verified Institutional Classification:</strong> Registered with the Wyoming Secretary of State as a domestic managing holding entity (Charter #WY-2024-001482910). Governed by multi-tiered dual-authorization and tamper-evident audit protocols.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Right Side: Statutory Attributes and Portal Access (Zero unverified claims) */}
+                <div className="lg:col-span-5 bg-white p-6 sm:p-7 rounded-xl border border-slate-200 shadow-xs space-y-5">
+                  <div className="flex items-center justify-between pb-4 border-b border-slate-100">
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#101D35]">
+                      Corporate Charter Data
+                    </span>
+                    <span className="text-[11px] font-mono text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded">
+                      Active · Wyoming
+                    </span>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-3 text-xs">
+                    <div className="p-3 bg-[#F8FAFC] rounded border border-slate-100 space-y-0.5">
+                      <span className="text-[9px] font-bold uppercase text-slate-400 tracking-wider block">
+                        Charter ID
+                      </span>
+                      <span className="font-mono font-bold text-[#101D35] block">
+                        WY-2024-001482910
+                      </span>
+                      <span className="text-[10px] text-slate-500">Secretary of State</span>
+                    </div>
+
+                    <div className="p-3 bg-[#F8FAFC] rounded border border-slate-100 space-y-0.5">
+                      <span className="text-[9px] font-bold uppercase text-slate-400 tracking-wider block">
+                        NAICS Classification
+                      </span>
+                      <span className="font-mono font-bold text-[#101D35] block">
+                        551114
+                      </span>
+                      <span className="text-[10px] text-[#C5A46D] font-medium">Managing Office</span>
+                    </div>
+                  </div>
+
+                  <div className="text-xs text-slate-600 pt-1">
+                    <strong className="text-[#101D35] block font-semibold mb-0.5">Corporate Seat & Domicile:</strong>
+                    30 N Gould Street Ste N, Sheridan, WY 82801, USA
+                  </div>
+
+                  <div className="pt-2 text-center text-xs text-[#9E7D47] font-semibold italic">
+                    “Strength in Foundation. Excellence in Growth.”
+                  </div>
+
+                  <button
+                    onClick={onOpenAuth}
+                    className="w-full flex items-center justify-center gap-2 py-3 px-4 text-xs font-bold uppercase tracking-wider text-white bg-[#101D35] hover:bg-[#1A2E50] border border-[#C5A46D]/60 rounded-md transition-all cursor-pointer shadow-sm group"
+                  >
+                    <Lock className="w-3.5 h-3.5 text-[#C5A46D] group-hover:scale-110 transition-transform" />
+                    <span>Enterprise Portal Access →</span>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
       </section>
 
       {/* ========================================================================= */}

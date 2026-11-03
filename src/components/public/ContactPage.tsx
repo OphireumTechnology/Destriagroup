@@ -14,6 +14,7 @@ import {
   ShieldCheck,
   Clock
 } from 'lucide-react';
+import { assetUrl } from '../../utils/assetPath';
 
 export const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -57,21 +58,41 @@ export const ContactPage: React.FC = () => {
           </p>
         </div>
 
+        {/* Executive Secretariat Visual Diagram */}
+        <div className="bg-[#081426] p-4 sm:p-6 rounded-2xl border border-[#C5A46D]/30 shadow-lg overflow-hidden">
+          <div className="mb-4 flex items-center justify-between">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#C5A46D]">
+              Corporate Domicile &amp; Executive Secretariat
+            </span>
+            <span className="text-[11px] font-mono text-cyan-400 bg-cyan-950/60 border border-cyan-800 px-2.5 py-0.5 rounded">
+              Sheridan, Wyoming
+            </span>
+          </div>
+          <img
+            src={assetUrl('/images/corporate/contact_executive_secretariat.svg')}
+            alt="Corporate Secretariat Directory & Institutional Communications"
+            className="w-full h-auto max-h-[420px] object-contain mx-auto"
+            loading="lazy"
+          />
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           
           {/* Left Column: Headquarters Details & Statutory Info */}
           <div className="lg:col-span-5 space-y-8">
             
-            <div className="p-8 bg-[#101D35] text-white rounded-lg border border-[#C5A46D]/40 space-y-6">
-              <h3 className="text-sm font-bold uppercase tracking-widest text-[#C5A46D]">
+            <div className="p-8 bg-gradient-to-br from-[#F8FAFC] to-[#F1F5F9] text-[#101D35] rounded-xl border border-slate-200 shadow-sm space-y-6 relative overflow-hidden">
+              <div className="h-1 w-full bg-gradient-to-r from-[#9E7D47] via-[#DFCA9E] to-[#C5A46D] absolute top-0 left-0 right-0" />
+
+              <h3 className="text-xs font-bold uppercase tracking-widest text-[#9E7D47]">
                 Principal Executive Office
               </h3>
 
-              <div className="space-y-5 text-xs text-slate-300">
+              <div className="space-y-5 text-xs text-slate-600">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-[#C5A46D] shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-white block text-sm font-semibold mb-1">
+                    <strong className="text-[#101D35] block text-sm font-semibold mb-1">
                       Statutory & Managing Headquarters:
                     </strong>
                     <span>
@@ -85,7 +106,7 @@ export const ContactPage: React.FC = () => {
                 <div className="flex items-start gap-3">
                   <Building2 className="w-5 h-5 text-[#C5A46D] shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-white block text-sm font-semibold mb-1">
+                    <strong className="text-[#101D35] block text-sm font-semibold mb-1">
                       Classification & Charter:
                     </strong>
                     <span>
@@ -98,7 +119,7 @@ export const ContactPage: React.FC = () => {
                 <div className="flex items-start gap-3">
                   <Mail className="w-5 h-5 text-[#C5A46D] shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-white block text-sm font-semibold mb-1">
+                    <strong className="text-[#101D35] block text-sm font-semibold mb-1">
                       Institutional Dispatch:
                     </strong>
                     <span>
@@ -111,7 +132,7 @@ export const ContactPage: React.FC = () => {
                 <div className="flex items-start gap-3">
                   <Clock className="w-5 h-5 text-[#C5A46D] shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-white block text-sm font-semibold mb-1">
+                    <strong className="text-[#101D35] block text-sm font-semibold mb-1">
                       Executive Business Hours:
                     </strong>
                     <span>
@@ -121,7 +142,7 @@ export const ContactPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-white/10 text-[11px] text-slate-400">
+              <div className="pt-4 border-t border-slate-200 text-[11px] text-slate-500">
                 Statutory Agent of Record: Registered Agents Inc., Sheridan, WY. For legal service of process, address directly to Office of the General Counsel.
               </div>
             </div>

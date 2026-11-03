@@ -14,6 +14,7 @@ import {
   Search,
   Filter
 } from 'lucide-react';
+import { assetUrl } from '../../utils/assetPath';
 
 export const NewsPage: React.FC = () => {
   const { claims } = useEnterprise();
@@ -45,7 +46,7 @@ export const NewsPage: React.FC = () => {
       date: 'September 28, 2026',
       title: 'Independent Certified Audit Confirms Clean Opinion on FY2026 Consolidated Statements',
       category: 'Regulatory Filings',
-      summary: 'Independent audit report confirms consolidated subsidiary asset valuation of $840.5M with $148.2M trailing enterprise revenue and flawless debt covenant ratios.',
+      summary: 'Independent audit report confirms consolidated subsidiary capitalization, audited operating controls, and full compliance with statutory financial covenants and Wyoming administrative statutes.',
       source: 'Independent Auditor Report FY2026',
       verifiedBy: 'Marcus Thorne, CFA (VP of Finance)',
       verificationCode: 'VRF-2026-FIN-8840'
@@ -74,11 +75,29 @@ export const NewsPage: React.FC = () => {
             <span>Verified Press Registry</span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-[#101D35] tracking-tight">
-            News, Releases & Institutional Disclosures
+            News, Releases &amp; Institutional Disclosures
           </h1>
           <p className="mt-4 text-base text-slate-600 max-w-3xl leading-relaxed">
             In compliance with our institutional governance charter, all corporate releases, quantitative assertions, and subsidiary disclosures undergo formal legal review and maker-checker audit before publication.
           </p>
+        </div>
+
+        {/* Regulatory Disclosure Visual Diagram */}
+        <div className="bg-[#081220] p-4 sm:p-6 rounded-2xl border border-[#C5A46D]/30 shadow-lg overflow-hidden">
+          <div className="mb-4 flex items-center justify-between">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#C5A46D]">
+              Regulatory Disclosure &amp; Audit Trail
+            </span>
+            <span className="text-[11px] font-mono text-emerald-400 bg-emerald-950/60 border border-emerald-800 px-2.5 py-0.5 rounded">
+              Immutable Verification
+            </span>
+          </div>
+          <img
+            src={assetUrl('/images/corporate/disclosures_statutory_ledger.svg')}
+            alt="Statutory Disclosures & Compliance Audit Ledger"
+            className="w-full h-auto max-h-[440px] object-contain mx-auto"
+            loading="lazy"
+          />
         </div>
 
         {/* Controlled Content Verification Banner */}
@@ -87,7 +106,7 @@ export const NewsPage: React.FC = () => {
             <ShieldCheck className="w-6 h-6 text-[#C5A46D] shrink-0 mt-0.5" />
             <div>
               <h3 className="text-sm font-bold text-[#101D35]">
-                Content Approval System (CMS) & Verification Standard
+                Content Approval System (CMS) &amp; Verification Standard
               </h3>
               <p className="text-xs text-slate-600 mt-1 max-w-2xl leading-relaxed">
                 DESTRIA GROUP INC. enforces strict zero-fabrication standards. Every numerical metric, revenue milestone, or capacity claim is cryptographically linked to an underlying legal document in the Enterprise Vault.

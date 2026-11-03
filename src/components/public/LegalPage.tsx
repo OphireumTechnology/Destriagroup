@@ -12,6 +12,7 @@ import {
   Lock,
   Download
 } from 'lucide-react';
+import { assetUrl } from '../../utils/assetPath';
 
 export const LegalPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'naics' | 'terms' | 'privacy' | 'fincen'>('naics');
@@ -33,6 +34,24 @@ export const LegalPage: React.FC = () => {
           <p className="mt-4 text-base text-slate-600 max-w-3xl leading-relaxed">
             Statutory profile, NAICS 551114 compliance documentation, anti-money laundering frameworks, and corporate terms governing DESTRIA GROUP INC. and its operating entities.
           </p>
+        </div>
+
+        {/* Legal Charter Visual Diagram */}
+        <div className="bg-[#081220] p-4 sm:p-6 rounded-2xl border border-[#C5A46D]/30 shadow-lg overflow-hidden">
+          <div className="mb-4 flex items-center justify-between">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#C5A46D]">
+              Wyoming Corporate Charter &amp; Statutory Authority
+            </span>
+            <span className="text-[11px] font-mono text-emerald-400 bg-emerald-950/60 border border-emerald-800 px-2.5 py-0.5 rounded">
+              Charter #WY-2024-001482910
+            </span>
+          </div>
+          <img
+            src={assetUrl('/images/corporate/legal_statutory_charter.svg')}
+            alt="Wyoming Domestic Management Holding Entity Charter"
+            className="w-full h-auto max-h-[440px] object-contain mx-auto"
+            loading="lazy"
+          />
         </div>
 
         {/* Tab Selector */}

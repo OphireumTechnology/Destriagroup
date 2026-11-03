@@ -1,0 +1,6 @@
+{
+  "name": "DESTRIA GROUP INC. — Corporate Portal & Enterprise Command Center",
+  "description": "Official corporate website and institutional Enterprise Command Center for DESTRIA GROUP INC. (NAICS 551114).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

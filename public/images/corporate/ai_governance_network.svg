@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="aiGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DFCA9E" />
+      <stop offset="50%" stop-color="#C5A46D" />
+      <stop offset="100%" stop-color="#9E7D47" />
+    </linearGradient>
+
+    <linearGradient id="globeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A2E50" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0A1324" stop-opacity="0.95" />
+    </linearGradient>
+
+    <radialGradient id="aiCoreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C5A46D" stop-opacity="0.35" />
+      <stop offset="70%" stop-color="#101D35" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#101D35" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background Glow -->
+  <circle cx="300" cy="200" r="180" fill="url(#aiCoreGlow)" />
+
+  <!-- Outer Orbital Rings (Governance Oversight Arcs) -->
+  <ellipse cx="300" cy="200" rx="220" ry="85" fill="none" stroke="#C5A46D" stroke-width="1.2" stroke-dasharray="6,8" stroke-opacity="0.6" transform="rotate(-15 300 200)" />
+  <ellipse cx="300" cy="200" rx="200" ry="75" fill="none" stroke="#B8C0CC" stroke-width="0.8" stroke-opacity="0.4" transform="rotate(25 300 200)" />
+  <ellipse cx="300" cy="200" rx="170" ry="170" fill="none" stroke="#223961" stroke-width="1" stroke-opacity="0.5" />
+
+  <!-- Digital Globe Sphere -->
+  <circle cx="300" cy="200" r="110" fill="url(#globeGrad)" stroke="#C5A46D" stroke-width="1.5" stroke-opacity="0.8" />
+
+  <!-- Globe Latitudes / Longitudes -->
+  <ellipse cx="300" cy="200" rx="110" ry="40" fill="none" stroke="#2D4877" stroke-width="0.8" stroke-opacity="0.7" />
+  <ellipse cx="300" cy="200" rx="110" ry="80" fill="none" stroke="#2D4877" stroke-width="0.8" stroke-opacity="0.7" />
+  <ellipse cx="300" cy="200" rx="40" ry="110" fill="none" stroke="#2D4877" stroke-width="0.8" stroke-opacity="0.7" />
+  <ellipse cx="300" cy="200" rx="80" ry="110" fill="none" stroke="#2D4877" stroke-width="0.8" stroke-opacity="0.7" />
+  <line x1="300" y1="90" x2="300" y2="310" stroke="#C5A46D" stroke-width="1" stroke-dasharray="3,3" stroke-opacity="0.6" />
+
+  <!-- Center AI Decision-Support Processor Core -->
+  <g transform="translate(265, 165)">
+    <rect x="0" y="0" width="70" height="70" rx="10" fill="#101D35" stroke="url(#aiGold)" stroke-width="2" />
+    <rect x="12" y="12" width="46" height="46" rx="6" fill="#1A2E50" stroke="#C5A46D" stroke-width="1" stroke-opacity="0.7" />
+
+    <!-- Processor Circuit Bus Traces (North, South, East, West) -->
+    <line x1="20" y1="0" x2="20" y2="-12" stroke="#C5A46D" stroke-width="1.5" />
+    <line x1="35" y1="0" x2="35" y2="-15" stroke="#C5A46D" stroke-width="1.5" />
+    <line x1="50" y1="0" x2="50" y2="-12" stroke="#C5A46D" stroke-width="1.5" />
+
+    <line x1="20" y1="70" x2="20" y2="82" stroke="#C5A46D" stroke-width="1.5" />
+    <line x1="35" y1="70" x2="35" y2="85" stroke="#C5A46D" stroke-width="1.5" />
+    <line x1="50" y1="70" x2="50" y2="82" stroke="#C5A46D" stroke-width="1.5" />
+
+    <line x1="0" y1="20" x2="-12" y2="20" stroke="#C5A46D" stroke-width="1.5" />
+    <line x1="0" y1="35" x2="-15" y2="35" stroke="#C5A46D" stroke-width="1.5" />
+    <line x1="0" y1="50" x2="-12" y2="50" stroke="#C5A46D" stroke-width="1.5" />
+
+    <line x1="70" y1="20" x2="82" y2="20" stroke="#C5A46D" stroke-width="1.5" />
+    <line x1="70" y1="35" x2="85" y2="35" stroke="#C5A46D" stroke-width="1.5" />
+    <line x1="70" y1="50" x2="82" y2="50" stroke="#C5A46D" stroke-width="1.5" />
+
+    <!-- Core Neural Geometry -->
+    <polygon points="35,22 47,35 35,48 23,35" fill="none" stroke="url(#aiGold)" stroke-width="1.5" />
+    <circle cx="35" cy="35" r="4" fill="#DFCA9E" />
+  </g>
+
+  <!-- Governance Nodes around Orbital Pathways -->
+  <g>
+    <!-- Node 1: Intelligence -->
+    <circle cx="150" cy="170" r="5" fill="#C5A46D" stroke="#101D35" stroke-width="1.5" />
+    <circle cx="150" cy="170" r="11" fill="none" stroke="#C5A46D" stroke-width="0.8" stroke-dasharray="2,2" />
+    <text x="145" y="150" font-family="Montserrat, sans-serif" font-size="9" font-weight="700" fill="#DFCA9E" text-anchor="end">INTELLIGENCE</text>
+
+    <!-- Node 2: Risk Monitoring -->
+    <circle cx="450" cy="140" r="5" fill="#DFCA9E" stroke="#101D35" stroke-width="1.5" />
+    <circle cx="450" cy="140" r="11" fill="none" stroke="#DFCA9E" stroke-width="0.8" stroke-dasharray="2,2" />
+    <text x="455" y="125" font-family="Montserrat, sans-serif" font-size="9" font-weight="700" fill="#DFCA9E" text-anchor="start">RISK MONITORING</text>
+
+    <!-- Node 3: Governance Assist -->
+    <circle cx="460" cy="260" r="5" fill="#C5A46D" stroke="#101D35" stroke-width="1.5" />
+    <circle cx="460" cy="260" r="11" fill="none" stroke="#C5A46D" stroke-width="0.8" stroke-dasharray="2,2" />
+    <text x="465" y="280" font-family="Montserrat, sans-serif" font-size="9" font-weight="700" fill="#DFCA9E" text-anchor="start">GOVERNANCE ASSIST</text>
+
+    <!-- Node 4: Audit & Proof -->
+    <circle cx="140" cy="240" r="5" fill="#B8C0CC" stroke="#101D35" stroke-width="1.5" />
+    <circle cx="140" cy="240" r="11" fill="none" stroke="#B8C0CC" stroke-width="0.8" stroke-dasharray="2,2" />
+    <text x="135" y="260" font-family="Montserrat, sans-serif" font-size="9" font-weight="700" fill="#B8C0CC" text-anchor="end">AUDIT & TRACEABILITY</text>
+  </g>
+
+  <!-- Connective Data Beams linking to Core -->
+  <line x1="150" y1="170" x2="265" y2="190" stroke="#C5A46D" stroke-width="1" stroke-dasharray="3,3" stroke-opacity="0.7" />
+  <line x1="450" y1="140" x2="335" y2="185" stroke="#DFCA9E" stroke-width="1" stroke-dasharray="3,3" stroke-opacity="0.7" />
+  <line x1="460" y1="260" x2="335" y2="215" stroke="#C5A46D" stroke-width="1" stroke-dasharray="3,3" stroke-opacity="0.7" />
+  <line x1="140" y1="240" x2="265" y2="215" stroke="#B8C0CC" stroke-width="1" stroke-dasharray="3,3" stroke-opacity="0.6" />
+</svg>

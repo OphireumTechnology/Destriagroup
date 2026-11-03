@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Sky & Twilight Gradients -->
+    <linearGradient id="twilightSky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070D18" />
+      <stop offset="40%" stop-color="#0D172A" />
+      <stop offset="75%" stop-color="#101D35" />
+      <stop offset="100%" stop-color="#1A2E50" />
+    </linearGradient>
+
+    <linearGradient id="goldHaze" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C5A46D" stop-opacity="0.25" />
+      <stop offset="50%" stop-color="#DFCA9E" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#101D35" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Skyscraper Glass Facade Shaders -->
+    <linearGradient id="towerGlass1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#172846" stop-opacity="0.95" />
+      <stop offset="45%" stop-color="#0E1A2E" stop-opacity="0.9" />
+      <stop offset="70%" stop-color="#1A2D4F" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#0A1220" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="towerGlass2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E355B" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#122038" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#080F1C" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="goldBeam" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C5A46D" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#DFCA9E" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#9E7D47" stop-opacity="0.1" />
+    </linearGradient>
+
+    <!-- Structural Grid Pattern -->
+    <pattern id="glassGrid" width="24" height="40" patternUnits="userSpaceOnUse">
+      <rect width="24" height="40" fill="none" stroke="#223961" stroke-width="0.75" stroke-opacity="0.45" />
+      <line x1="0" y1="20" x2="24" y2="20" stroke="#C5A46D" stroke-width="0.3" stroke-opacity="0.25" />
+    </pattern>
+
+    <pattern id="denseGrid" width="16" height="28" patternUnits="userSpaceOnUse">
+      <rect width="16" height="28" fill="none" stroke="#2A4575" stroke-width="0.5" stroke-opacity="0.35" />
+    </pattern>
+
+    <!-- Network Pulse -->
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Sky Base -->
+  <rect width="1200" height="800" fill="url(#twilightSky)" />
+
+  <!-- Subtle Financial Network Lines in Sky Background -->
+  <g opacity="0.25">
+    <path d="M 0 350 Q 300 280 600 320 T 1200 240" fill="none" stroke="#C5A46D" stroke-width="1" stroke-dasharray="4,6" />
+    <path d="M 0 420 Q 400 380 800 340 T 1200 310" fill="none" stroke="#B8C0CC" stroke-width="0.75" />
+    <path d="M 100 600 L 350 450 L 550 520 L 780 380 L 1050 420 L 1200 330" fill="none" stroke="#C5A46D" stroke-width="0.75" stroke-opacity="0.5" />
+  </g>
+
+  <!-- Horizon Atmospheric Light -->
+  <rect x="0" y="300" width="1200" height="500" fill="url(#goldHaze)" />
+
+  <!-- Background Secondary Towers -->
+  <g opacity="0.65">
+    <!-- Tower Left Deep -->
+    <polygon points="40,240 180,210 180,800 40,800" fill="#0D182B" />
+    <polygon points="180,210 260,250 260,800 180,800" fill="#09101E" />
+    <rect x="40" y="240" width="140" height="560" fill="url(#denseGrid)" opacity="0.4" />
+    <!-- Tower Center Deep Spire -->
+    <polygon points="520,120 522,60 524,120 580,180 580,800 460,800 460,180" fill="#0F1B30" />
+    <line x1="522" y1="50" x2="522" y2="120" stroke="#C5A46D" stroke-width="1.5" />
+    <!-- Tower Right Mid -->
+    <polygon points="920,160 1060,200 1060,800 920,800" fill="#111E36" />
+    <polygon points="1060,200 1160,240 1160,800 1060,800" fill="#0B1322" />
+    <rect x="920" y="160" width="140" height="640" fill="url(#denseGrid)" opacity="0.5" />
+  </g>
+
+  <!-- Foreground Primary Skyscraper (Left Perspective) -->
+  <g>
+    <!-- Tower 1 Facade Face A (Reflective Navy Glass) -->
+    <polygon points="140,110 380,50 380,800 140,800" fill="url(#towerGlass1)" />
+    <!-- Tower 1 Facade Face B (Angular Side) -->
+    <polygon points="380,50 490,130 490,800 380,800" fill="url(#towerGlass2)" />
+
+    <!-- Architectural Beams (Gold highlights on edges) -->
+    <line x1="380" y1="50" x2="380" y2="800" stroke="url(#goldBeam)" stroke-width="2.5" />
+    <line x1="140" y1="110" x2="140" y2="800" stroke="#C5A46D" stroke-width="1" stroke-opacity="0.4" />
+    <line x1="490" y1="130" x2="490" y2="800" stroke="#B8C0CC" stroke-width="0.75" stroke-opacity="0.3" />
+
+    <!-- Structural Curtain Wall Windows Grid -->
+    <polygon points="140,110 380,50 380,800 140,800" fill="url(#glassGrid)" />
+
+    <!-- Interior Warm Architectural Lighting Bands -->
+    <line x1="150" y1="280" x2="370" y2="225" stroke="#C5A46D" stroke-width="1.5" stroke-opacity="0.6" />
+    <line x1="150" y1="440" x2="370" y2="385" stroke="#DFCA9E" stroke-width="1" stroke-opacity="0.5" />
+    <line x1="150" y1="600" x2="370" y2="545" stroke="#C5A46D" stroke-width="1.2" stroke-opacity="0.4" />
+  </g>
+
+  <!-- Foreground Corporate Tower (Right / Institutional Center) -->
+  <g>
+    <!-- Main Right High-Rise Face A -->
+    <polygon points="720,80 940,30 940,800 720,800" fill="url(#towerGlass2)" />
+    <!-- Main Right High-Rise Face B -->
+    <polygon points="940,30 1140,90 1140,800 940,800" fill="url(#towerGlass1)" />
+
+    <!-- Gold Structural Edge Lines -->
+    <line x1="940" y1="30" x2="940" y2="800" stroke="url(#goldBeam)" stroke-width="2.5" />
+    <line x1="720" y1="80" x2="720" y2="800" stroke="#C5A46D" stroke-width="1" stroke-opacity="0.5" />
+    <line x1="1140" y1="90" x2="1140" y2="800" stroke="#B8C0CC" stroke-width="1" stroke-opacity="0.3" />
+
+    <!-- Window Grids -->
+    <polygon points="720,80 940,30 940,800 720,800" fill="url(#glassGrid)" />
+    <polygon points="940,30 1140,90 1140,800 940,800" fill="url(#glassGrid)" opacity="0.6" />
+
+    <!-- Crown Spire / Architectural Finial -->
+    <polygon points="938,30 940,0 942,30" fill="#C5A46D" />
+    <circle cx="940" cy="2" r="3" fill="#DFCA9E" filter="url(#goldGlow)" />
+
+    <!-- Interior Light Accents -->
+    <line x1="730" y1="220" x2="930" y2="175" stroke="#DFCA9E" stroke-width="1.2" stroke-opacity="0.65" />
+    <line x1="730" y1="360" x2="930" y2="315" stroke="#C5A46D" stroke-width="1.5" stroke-opacity="0.5" />
+    <line x1="730" y1="510" x2="930" y2="465" stroke="#DFCA9E" stroke-width="1" stroke-opacity="0.4" />
+  </g>
+
+  <!-- Network Connectivity & FinTech Nodes Over Architecture -->
+  <g opacity="0.55">
+    <circle cx="380" cy="225" r="3" fill="#C5A46D" filter="url(#goldGlow)" />
+    <circle cx="522" cy="180" r="3.5" fill="#DFCA9E" filter="url(#goldGlow)" />
+    <circle cx="720" cy="220" r="3" fill="#C5A46D" filter="url(#goldGlow)" />
+    <circle cx="940" cy="175" r="4" fill="#DFCA9E" filter="url(#goldGlow)" />
+    <circle cx="620" cy="320" r="2.5" fill="#B8C0CC" />
+    <circle cx="480" cy="380" r="3" fill="#C5A46D" />
+
+    <!-- Inter-node vector lines -->
+    <line x1="380" y1="225" x2="522" y2="180" stroke="#C5A46D" stroke-width="0.8" stroke-dasharray="3,3" />
+    <line x1="522" y1="180" x2="720" y2="220" stroke="#C5A46D" stroke-width="0.8" stroke-dasharray="3,3" />
+    <line x1="720" y1="220" x2="940" y2="175" stroke="#DFCA9E" stroke-width="1" stroke-dasharray="4,4" />
+    <line x1="522" y1="180" x2="620" y2="320" stroke="#B8C0CC" stroke-width="0.6" />
+    <line x1="620" y1="320" x2="720" y2="220" stroke="#B8C0CC" stroke-width="0.6" />
+  </g>
+
+  <!-- Bottom Vignette Scrim (Ensures text on top is crisp & high-contrast) -->
+  <rect x="0" y="550" width="1200" height="250" fill="url(#twilightSky)" opacity="0.85" />
+  <rect x="0" y="0" width="1200" height="800" fill="#101D35" opacity="0.45" />
+</svg>

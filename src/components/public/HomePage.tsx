@@ -145,13 +145,13 @@ export const HomePage: React.FC<{ onOpenAuth: () => void }> = ({ onOpenAuth }) =
         <HeroAnimationCanvas />
 
         {/* Content Container (Two-Column Desktop Layout) */}
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        <div className="relative z-20 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
             
             {/* ------------------------------------------------------------- */}
-            {/* LEFT COLUMN: Corporate Positioning                           */}
+            {/* LEFT COLUMN: Corporate Positioning (55% desktop width)        */}
             {/* ------------------------------------------------------------- */}
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-7 min-w-0 w-full space-y-5 sm:space-y-6">
               
               {/* Institutional Kicker (Zero-pill clean typography) */}
               <div className="flex flex-wrap items-center gap-2 text-[11px] sm:text-xs font-semibold tracking-wider text-slate-300 uppercase">
@@ -162,12 +162,10 @@ export const HomePage: React.FC<{ onOpenAuth: () => void }> = ({ onOpenAuth }) =
                 <span>SHERIDAN, WYOMING</span>
               </div>
 
-              {/* Main Heading (Accessible HTML with Metallic-Gold Gradient) */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold tracking-tight text-white leading-[1.12] text-balance">
-                A Diversified{' '}
-                <span className="gold-gradient-text block sm:inline">
-                  Holding Corporation
-                </span>
+              {/* Main Heading (Explicitly two lines on desktop, zero overlap) */}
+              <h1 className="text-[clamp(2.25rem,3.8vw,3.75rem)] font-extrabold tracking-[-0.035em] text-white leading-[1.08] text-left">
+                <span className="block text-white">A Diversified</span>
+                <span className="block gold-gradient-text">Holding Corporation</span>
               </h1>
 
               {/* Supporting Text */}
@@ -177,21 +175,21 @@ export const HomePage: React.FC<{ onOpenAuth: () => void }> = ({ onOpenAuth }) =
 
               {/* Five Minimalist Capability Indicators */}
               <div className="pt-1">
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5">
+                <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-2.5">
                   {capabilityIndicators.map(indicator => {
                     const Icon = indicator.icon;
                     return (
                       <div
                         key={indicator.id}
-                        className="p-2.5 bg-black/40 backdrop-blur-md border border-[#C5A46D]/35 rounded hover:border-[#C5A46D] transition-all group cursor-default"
+                        className="p-3 bg-black/45 backdrop-blur-md border border-[#C5A46D]/35 rounded-lg hover:border-[#C5A46D] transition-all group cursor-default shadow-sm h-full flex flex-col justify-start"
                       >
-                        <div className="w-8 h-8 rounded bg-[#101D35]/80 border border-[#C5A46D]/60 text-[#C5A46D] flex items-center justify-center mb-2 group-hover:scale-110 transition-transform shadow-sm">
+                        <div className="w-7 h-7 sm:w-8 sm:h-8 rounded bg-[#101D35]/90 border border-[#C5A46D]/60 text-[#C5A46D] flex items-center justify-center mb-2.5 shrink-0 group-hover:scale-105 transition-transform shadow-sm">
                           <Icon className="w-4 h-4 stroke-[1.75]" />
                         </div>
-                        <span className="text-xs font-bold text-white block leading-tight">
+                        <span className="text-xs font-bold text-white block leading-snug group-hover:text-[#DFCA9E] transition-colors">
                           {indicator.title}
                         </span>
-                        <span className="text-[10px] text-slate-400 block mt-0.5 leading-tight line-clamp-1">
+                        <span className="text-[10.5px] text-slate-300 block mt-1 leading-tight">
                           {indicator.detail}
                         </span>
                       </div>
@@ -201,13 +199,13 @@ export const HomePage: React.FC<{ onOpenAuth: () => void }> = ({ onOpenAuth }) =
               </div>
 
               {/* Verified Institutional Classification Card */}
-              <div className="p-3.5 sm:p-4 bg-black/50 backdrop-blur-md border border-white/20 rounded-lg max-w-2xl">
+              <div className="p-3 sm:p-3.5 bg-black/45 backdrop-blur-md border border-white/15 rounded-lg max-w-2xl">
                 <div className="flex items-start gap-3">
                   <div className="w-5 h-5 rounded-full bg-[#C5A46D]/20 border border-[#C5A46D] flex items-center justify-center shrink-0 mt-0.5">
                     <CheckCircle2 className="w-3.5 h-3.5 text-[#C5A46D]" />
                   </div>
                   <div className="text-xs text-slate-200 leading-relaxed">
-                    <strong className="text-white font-semibold">Verified Institutional Classification:</strong> Registered with the Wyoming Secretary of State as a domestic managing holding entity. Governed by multi-tiered dual-authorization and tamper-evident audit protocols.
+                    <strong className="text-white font-semibold">Verified Institutional Classification:</strong> Registered with the Wyoming Secretary of State as a domestic managing holding entity (Charter #WY-2024-001482910). Governed by multi-tiered dual-authorization and tamper-evident audit protocols.
                   </div>
                 </div>
               </div>
@@ -239,9 +237,9 @@ export const HomePage: React.FC<{ onOpenAuth: () => void }> = ({ onOpenAuth }) =
             </div>
 
             {/* ------------------------------------------------------------- */}
-            {/* RIGHT COLUMN: Corporate Identity Panel (Accurate & Verified)   */}
+            {/* RIGHT COLUMN: Corporate Identity Panel (45% desktop width)     */}
             {/* ------------------------------------------------------------- */}
-            <div className="lg:col-span-5">
+            <div className="lg:col-span-5 min-w-0 w-full">
               <div className="bg-[#101D35]/95 backdrop-blur-md text-white rounded-xl shadow-2xl border border-[#C5A46D]/50 relative overflow-hidden">
                 
                 {/* Thin Metallic-Gold Upper Border */}
@@ -250,25 +248,25 @@ export const HomePage: React.FC<{ onOpenAuth: () => void }> = ({ onOpenAuth }) =
                 <div className="p-6 sm:p-8 space-y-5">
                   
                   {/* Top Branding Lockup with Transparent Official Logo */}
-                  <div className="flex items-center justify-between pb-5 border-b border-white/10">
-                    <div className="flex items-center gap-3">
+                  <div className="flex items-center justify-between pb-5 border-b border-white/10 gap-3">
+                    <div className="flex items-center gap-3 min-w-0">
                       <img
                         src="/images/branding/destria-official-logo.png"
                         alt="DESTRIA GROUP INC. Official Logo"
                         referrerPolicy="no-referrer"
-                        className="h-12 w-auto object-contain brightness-110 drop-shadow-[0_2px_8px_rgba(197,164,109,0.3)]"
+                        className="h-11 sm:h-12 w-auto object-contain brightness-110 drop-shadow-[0_2px_8px_rgba(197,164,109,0.3)] shrink-0"
                       />
-                      <div>
-                        <span className="font-extrabold text-sm tracking-tight text-white block leading-tight">
+                      <div className="min-w-0">
+                        <span className="font-extrabold text-sm tracking-tight text-white block leading-tight truncate">
                           DESTRIA GROUP INC.
                         </span>
-                        <span className="text-[10px] tracking-widest text-[#C5A46D] uppercase font-semibold">
+                        <span className="text-[10px] tracking-widest text-[#C5A46D] uppercase font-semibold block truncate">
                           Executive Managing Office
                         </span>
                       </div>
                     </div>
 
-                    <div className="text-right pl-4 border-l border-white/10">
+                    <div className="text-right pl-3 sm:pl-4 border-l border-white/10 shrink-0">
                       <span className="text-[9px] uppercase tracking-widest text-slate-400 block font-semibold">
                         INCORPORATION STATE
                       </span>
@@ -318,9 +316,9 @@ export const HomePage: React.FC<{ onOpenAuth: () => void }> = ({ onOpenAuth }) =
                     </div>
 
                     {/* Domicile Note */}
-                    <div className="text-[11px] text-slate-400 flex items-center justify-between pt-1">
+                    <div className="text-[11px] text-slate-300 flex items-center justify-between pt-1">
                       <span>Seat: 30 N Gould St Ste N, Sheridan, WY</span>
-                      <span className="text-slate-500 font-mono">USA</span>
+                      <span className="text-slate-400 font-mono">82801 USA</span>
                     </div>
 
                     {/* Corporate Principle Quote */}
@@ -330,7 +328,7 @@ export const HomePage: React.FC<{ onOpenAuth: () => void }> = ({ onOpenAuth }) =
                   </div>
 
                   {/* Portal Navigation Action */}
-                  <div className="pt-3 border-t border-white/10 flex items-center justify-between">
+                  <div className="pt-3 border-t border-white/10">
                     <button
                       onClick={onOpenAuth}
                       className="w-full flex items-center justify-center gap-2 py-3 px-4 text-xs font-bold uppercase tracking-wider text-white bg-[#1A2E50] hover:bg-[#233C66] border border-[#C5A46D]/60 rounded transition-all cursor-pointer shadow-sm group"

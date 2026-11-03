@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 550" width="100%" height="100%">
+  <defs>
+    <linearGradient id="finBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#061224" />
+      <stop offset="50%" stop-color="#0A1D38" />
+      <stop offset="100%" stop-color="#040D1A" />
+    </linearGradient>
+
+    <linearGradient id="goldFin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2E3C6" />
+      <stop offset="40%" stop-color="#DFCA9E" />
+      <stop offset="70%" stop-color="#C5A46D" />
+      <stop offset="100%" stop-color="#9E7D47" />
+    </linearGradient>
+
+    <pattern id="finGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="30" y2="0" stroke="#172A47" stroke-width="0.5" stroke-opacity="0.3" />
+      <line x1="0" y1="0" x2="0" y2="30" stroke="#172A47" stroke-width="0.5" stroke-opacity="0.3" />
+    </pattern>
+  </defs>
+
+  <rect width="1000" height="550" fill="url(#finBg)" />
+  <rect width="1000" height="550" fill="url(#finGrid)" />
+
+  <!-- Central Treasury Hub -->
+  <g transform="translate(500, 260)">
+    <circle cx="0" cy="0" r="85" fill="#0E223D" stroke="url(#goldFin)" stroke-width="2.5" />
+    <circle cx="0" cy="0" r="70" fill="#0A182C" stroke="#38BDF8" stroke-width="1" stroke-dasharray="3,3" />
+
+    <text x="0" y="-12" font-family="Montserrat, sans-serif" font-size="13" font-weight="800" fill="#F8FAFC" text-anchor="middle" letter-spacing="1">
+      CENTRAL TREASURY
+    </text>
+    <text x="0" y="8" font-family="Montserrat, sans-serif" font-size="9" font-weight="700" fill="#C5A46D" text-anchor="middle" letter-spacing="1.5">
+      CAPITAL ALLOCATION
+    </text>
+    <text x="0" y="26" font-family="JetBrains Mono, monospace" font-size="9" font-weight="600" fill="#34D399" text-anchor="middle">
+      DUAL CONTROL ESCROW
+    </text>
+  </g>
+
+  <!-- Subsidiary Capital Conduits (North, South, East, West) -->
+  <!-- 1. Industrial Dynamics Corp -->
+  <g transform="translate(180, 140)">
+    <rect x="-80" y="-30" width="160" height="60" rx="6" fill="#0C1B30" stroke="#C5A46D" stroke-width="1.2" />
+    <text x="0" y="-8" font-family="Montserrat, sans-serif" font-size="9" font-weight="700" fill="#F8FAFC" text-anchor="middle">Destria Industrial</text>
+    <text x="0" y="10" font-family="JetBrains Mono, monospace" font-size="8" fill="#C5A46D" text-anchor="middle">Equipment Facilities</text>
+  </g>
+  <path d="M 260 140 Q 380 180 415 230" fill="none" stroke="#C5A46D" stroke-width="1.5" stroke-dasharray="4,4" />
+
+  <!-- 2. CleanTech & Grid Infrastructure -->
+  <g transform="translate(820, 140)">
+    <rect x="-80" y="-30" width="160" height="60" rx="6" fill="#0C1B30" stroke="#38BDF8" stroke-width="1.2" />
+    <text x="0" y="-8" font-family="Montserrat, sans-serif" font-size="9" font-weight="700" fill="#F8FAFC" text-anchor="middle">Destria CleanTech</text>
+    <text x="0" y="10" font-family="JetBrains Mono, monospace" font-size="8" fill="#38BDF8" text-anchor="middle">Utility Battery Assets</text>
+  </g>
+  <path d="M 740 140 Q 620 180 585 230" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="4,4" />
+
+  <!-- 3. Global Mobility & Logistics -->
+  <g transform="translate(180, 390)">
+    <rect x="-80" y="-30" width="160" height="60" rx="6" fill="#0C1B30" stroke="#38BDF8" stroke-width="1.2" />
+    <text x="0" y="-8" font-family="Montserrat, sans-serif" font-size="9" font-weight="700" fill="#F8FAFC" text-anchor="middle">Destria Logistics</text>
+    <text x="0" y="10" font-family="JetBrains Mono, monospace" font-size="8" fill="#38BDF8" text-anchor="middle">Intermodal Cold-Chain</text>
+  </g>
+  <path d="M 260 390 Q 380 340 420 290" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="4,4" />
+
+  <!-- 4. Strategic Capital Partners -->
+  <g transform="translate(820, 390)">
+    <rect x="-80" y="-30" width="160" height="60" rx="6" fill="#0C1B30" stroke="#C5A46D" stroke-width="1.2" />
+    <text x="0" y="-8" font-family="Montserrat, sans-serif" font-size="9" font-weight="700" fill="#F8FAFC" text-anchor="middle">Destria Capital</text>
+    <text x="0" y="10" font-family="JetBrains Mono, monospace" font-size="8" fill="#C5A46D" text-anchor="middle">Structured Credit Tranches</text>
+  </g>
+  <path d="M 740 390 Q 620 340 580 290" fill="none" stroke="#C5A46D" stroke-width="1.5" stroke-dasharray="4,4" />
+
+  <text x="500" y="45" font-family="Montserrat, sans-serif" font-size="11" font-weight="800" fill="#C5A46D" text-anchor="middle" letter-spacing="3">
+    INSTITUTIONAL CAPITAL ALLOCATION &amp; TREASURY ARCHITECTURE
+  </text>
+</svg>

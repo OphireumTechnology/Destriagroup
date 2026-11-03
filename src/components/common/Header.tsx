@@ -55,8 +55,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAuth }) => {
             </div>
           </button>
 
-          {/* Zone 2: Navigation Links (single-line, clean typography) */}
-          <nav className="hidden lg:flex items-center gap-7">
+          {/* Zone 2: Navigation Links (single-line, clean typography, responsive breakpoint) */}
+          <nav className="hidden min-[1180px]:flex items-center gap-5 xl:gap-7">
             {navLinks.map(link => {
               const isActive = publicPage === link.id;
               return (
@@ -99,11 +99,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAuth }) => {
             )}
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex lg:hidden items-center gap-2">
+          {/* Mobile & Tablet Menu Button */}
+          <div className="flex min-[1180px]:hidden items-center gap-2">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-slate-700 hover:text-[#101D35] focus:outline-none"
+              className="p-2 text-slate-700 hover:text-[#101D35] focus:outline-none cursor-pointer"
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -112,9 +112,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAuth }) => {
         </div>
       </div>
 
-      {/* Mobile Menu Drawer */}
+      {/* Mobile & Tablet Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2">
+        <div className="min-[1180px]:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 shadow-lg">
           {navLinks.map(link => (
             <button
               key={link.id}

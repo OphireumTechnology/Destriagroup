@@ -96,8 +96,30 @@ export const EnterpriseProvider: React.FC<{ children: React.ReactNode }> = ({ ch
   });
 
   const [activeView, setActiveView] = useState<'public' | 'command-center'>('public');
-  const [publicPage, setPublicPage] = useState<string>('home');
+  const [publicPage, setPublicPage] = useState<string>(() => {
+    if (typeof window !== 'undefined') {
+      const hash = window.location.hash.replace('#', '').toLowerCase();
+      const valid = ['about', 'businesses', 'governance', 'partnerships', 'news', 'contact', 'legal', 'home'];
+      if (valid.includes(hash)) return hash;
+      const params = new URLSearchParams(window.location.search);
+      const page = params.get('page')?.toLowerCase();
+      if (page && valid.includes(page)) return page;
+    }
+    return 'home';
+  });
   const [commandCenterTab, setCommandCenterTab] = useState<string>('overview');
+
+  useEffect(() => {
+    const handleHash = () => {
+      const hash = window.location.hash.replace('#', '').toLowerCase();
+      const valid = ['about', 'businesses', 'governance', 'partnerships', 'news', 'contact', 'legal', 'home'];
+      if (valid.includes(hash)) {
+        setPublicPage(hash);
+      }
+    };
+    window.addEventListener('hashchange', handleHash);
+    return () => window.removeEventListener('hashchange', handleHash);
+  }, []);
 
   // Corporate Data State
   const [entities, setEntities] = useState<CorporateEntity[]>(() => {

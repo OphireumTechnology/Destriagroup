@@ -18,7 +18,7 @@ export const CorporateHero: React.FC<CorporateHeroProps> = ({
 }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
-  // Subtle cinematic motion overlay (respects prefers-reduced-motion)
+  // Subtle, restrained ambient lighting and network pulses (respects reduced motion)
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -36,21 +36,21 @@ export const CorporateHero: React.FC<CorporateHeroProps> = ({
     resize();
     window.addEventListener('resize', resize);
 
-    // Subtle AI governance nodes & flowing financial network pulses
+    // Subtle AI governance nodes aligned with architectural artwork
     const networkNodes = [
-      { x: 0.35, y: 0.62, radius: 3.5, pulsePhase: 0, label: 'Capital Node' },
-      { x: 0.38, y: 0.58, radius: 2.5, pulsePhase: 1.2 },
-      { x: 0.32, y: 0.66, radius: 2.8, pulsePhase: 2.4 },
-      { x: 0.42, y: 0.64, radius: 2.2, pulsePhase: 3.6 },
-      { x: 0.46, y: 0.55, radius: 3.0, pulsePhase: 4.8 },
-      { x: 0.54, y: 0.48, radius: 2.5, pulsePhase: 1.8 },
-      { x: 0.60, y: 0.42, radius: 3.2, pulsePhase: 3.0 },
-      { x: 0.67, y: 0.38, radius: 2.8, pulsePhase: 0.6 },
+      { x: 0.35, y: 0.62, radius: 3.2, pulsePhase: 0 },
+      { x: 0.38, y: 0.58, radius: 2.2, pulsePhase: 1.2 },
+      { x: 0.32, y: 0.66, radius: 2.6, pulsePhase: 2.4 },
+      { x: 0.42, y: 0.64, radius: 2.0, pulsePhase: 3.6 },
+      { x: 0.46, y: 0.55, radius: 2.8, pulsePhase: 4.8 },
+      { x: 0.54, y: 0.48, radius: 2.2, pulsePhase: 1.8 },
+      { x: 0.60, y: 0.42, radius: 3.0, pulsePhase: 3.0 },
+      { x: 0.67, y: 0.38, radius: 2.6, pulsePhase: 0.6 },
     ];
 
-    const streams = Array.from({ length: 14 }, (_, i) => ({
+    const streams = Array.from({ length: 10 }, (_, i) => ({
       progress: Math.random(),
-      speed: 0.0012 + Math.random() * 0.0016,
+      speed: 0.0010 + Math.random() * 0.0012,
       lane: i,
     }));
 
@@ -63,11 +63,11 @@ export const CorporateHero: React.FC<CorporateHeroProps> = ({
       ctx.clearRect(0, 0, w, h);
 
       if (!prefersReducedMotion) {
-        t += 0.016;
+        t += 0.014;
       }
 
-      // Draw subtle luminous connections between nodes
-      ctx.lineWidth = 0.8;
+      // Subtle fine connection lines
+      ctx.lineWidth = 0.7;
       for (let i = 0; i < networkNodes.length; i++) {
         for (let j = i + 1; j < networkNodes.length; j++) {
           const n1 = networkNodes[i];
@@ -77,8 +77,8 @@ export const CorporateHero: React.FC<CorporateHeroProps> = ({
           const x2 = n2.x * w;
           const y2 = n2.y * h;
           const dist = Math.hypot(x2 - x1, y2 - y1);
-          if (dist < w * 0.22) {
-            const alpha = (1 - dist / (w * 0.22)) * 0.22;
+          if (dist < w * 0.20) {
+            const alpha = (1 - dist / (w * 0.20)) * 0.18;
             ctx.beginPath();
             ctx.moveTo(x1, y1);
             ctx.lineTo(x2, y2);
@@ -88,7 +88,7 @@ export const CorporateHero: React.FC<CorporateHeroProps> = ({
         }
       }
 
-      // Draw flowing gold & cyan light pulses along pathways
+      // Gentle gold & cyan pulses along pathways
       streams.forEach((st) => {
         if (!prefersReducedMotion) {
           st.progress = (st.progress + st.speed) % 1;
@@ -99,39 +99,37 @@ export const CorporateHero: React.FC<CorporateHeroProps> = ({
         const py = srcNode.y * h + (dstNode.y * h - srcNode.y * h) * st.progress;
 
         ctx.beginPath();
-        ctx.arc(px, py, 1.8, 0, Math.PI * 2);
-        ctx.fillStyle = st.lane % 2 === 0 ? 'rgba(223, 202, 158, 0.75)' : 'rgba(56, 189, 248, 0.75)';
+        ctx.arc(px, py, 1.5, 0, Math.PI * 2);
+        ctx.fillStyle = st.lane % 2 === 0 ? 'rgba(223, 202, 158, 0.7)' : 'rgba(56, 189, 248, 0.7)';
         ctx.shadowColor = st.lane % 2 === 0 ? '#C5A46D' : '#38bdf8';
-        ctx.shadowBlur = 6;
+        ctx.shadowBlur = 4;
         ctx.fill();
         ctx.shadowBlur = 0;
       });
 
-      // Draw pulsating node beacons
+      // Ambient node beacons
       networkNodes.forEach((node) => {
         const nx = node.x * w;
         const ny = node.y * h;
-        const pulse = Math.sin(t * 2.2 + node.pulsePhase) * 0.5 + 0.5;
+        const pulse = Math.sin(t * 1.8 + node.pulsePhase) * 0.5 + 0.5;
 
-        // Subtle outer pulse ring
         ctx.beginPath();
-        ctx.arc(nx, ny, node.radius * (1.6 + pulse * 1.2), 0, Math.PI * 2);
-        ctx.strokeStyle = `rgba(197, 164, 109, ${0.28 * (1 - pulse * 0.5)})`;
-        ctx.lineWidth = 1;
+        ctx.arc(nx, ny, node.radius * (1.4 + pulse * 0.8), 0, Math.PI * 2);
+        ctx.strokeStyle = `rgba(197, 164, 109, ${0.22 * (1 - pulse * 0.5)})`;
+        ctx.lineWidth = 0.8;
         ctx.stroke();
 
-        // Node center
         ctx.beginPath();
-        ctx.arc(nx, ny, node.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.85)';
+        ctx.arc(nx, ny, node.radius * 0.9, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
         ctx.fill();
       });
 
       // Subtle architectural lighting sheen
-      const sheenX = (Math.sin(t * 0.5) * 0.2 + 0.5) * w;
-      const grad = ctx.createLinearGradient(sheenX - 60, 0, sheenX + 60, 0);
+      const sheenX = (Math.sin(t * 0.4) * 0.2 + 0.5) * w;
+      const grad = ctx.createLinearGradient(sheenX - 50, 0, sheenX + 50, 0);
       grad.addColorStop(0, 'rgba(197, 164, 109, 0)');
-      grad.addColorStop(0.5, 'rgba(197, 164, 109, 0.04)');
+      grad.addColorStop(0.5, 'rgba(197, 164, 109, 0.03)');
       grad.addColorStop(1, 'rgba(197, 164, 109, 0)');
       ctx.fillStyle = grad;
       ctx.fillRect(0, 0, w, h);
@@ -159,44 +157,42 @@ export const CorporateHero: React.FC<CorporateHeroProps> = ({
         aria-hidden="true"
       />
 
-      {/* Main 1440px Container */}
-      <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-12 sm:py-16 lg:py-20 w-full">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-14">
+      {/* Main 1360px Container with 64-80px vertical padding */}
+      <div className="relative z-10 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 w-full">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-12 w-full">
           
           {/* ================================================================= */}
-          {/* Left Column: 42% content width — Clean, distinct, single instance  */}
+          {/* Left Column: 45% content width — All text and buttons             */}
+          {/* Vertically centered, balanced spacing, no empty dead zones        */}
           {/* ================================================================= */}
-          <div className="w-full lg:w-[42%] flex flex-col justify-center space-y-6 sm:space-y-7 z-20">
+          <div className="w-full lg:w-[45%] flex flex-col justify-center space-y-6 z-20 shrink-0">
             
-            {/* Institutional Kicker */}
-            <div className="flex flex-wrap items-center gap-2 text-xs font-semibold tracking-wider text-slate-300 uppercase">
-              <span className="text-white font-bold tracking-widest">DESTRIA GROUP INC.</span>
-              <span aria-hidden="true" className="text-[#C5A46D]">·</span>
-              <span className="text-slate-300 font-mono">NAICS 551114</span>
-              <span aria-hidden="true" className="text-[#C5A46D]">·</span>
-              <span className="text-slate-300">SHERIDAN, WY</span>
+            {/* 1. Small Heading: Exactly 12-13px Montserrat */}
+            <div className="flex items-center gap-2 text-[12px] sm:text-[13px] font-bold tracking-widest text-[#C5A46D] uppercase">
+              <span>DESTRIA GROUP INC.</span>
+              <span aria-hidden="true" className="text-slate-500">·</span>
+              <span className="text-slate-300 font-medium">NAICS 551114</span>
+              <span aria-hidden="true" className="text-slate-500">·</span>
+              <span className="text-slate-300 font-medium">SHERIDAN, WY</span>
             </div>
 
-            {/* Corporate Headline: Clear, authoritative, and text-balanced */}
-            <div className="space-y-2">
-              <h1 className="text-3xl sm:text-4xl lg:text-[3.25rem] font-extrabold tracking-tight text-white leading-[1.12]">
-                <span className="block text-white">DESTRIA GROUP INC.</span>
-                <span className="block gold-gradient-text mt-1 text-2xl sm:text-3xl lg:text-[2.6rem]">
-                  A Diversified Holding Corporation
-                </span>
-              </h1>
-            </div>
+            {/* 2. Main Headline: 48-56px desktop, 1.1 line-height */}
+            {/* White for first line, metallic gold for second line */}
+            <h1 className="text-4xl sm:text-5xl lg:text-[52px] font-extrabold tracking-tight text-white leading-[1.1]">
+              <span className="block text-white">A Diversified</span>
+              <span className="block gold-gradient-text mt-1">Holding Corporation</span>
+            </h1>
 
-            {/* Corporate Message */}
-            <p className="text-base sm:text-lg text-slate-200 font-normal leading-relaxed max-w-xl">
-              Building, managing, and growing strategic enterprises through disciplined capital management, technology innovation, and responsible corporate governance.
+            {/* 3. Supporting Paragraph: 16-18px, 1.6 line-height, max-width 520px */}
+            <p className="text-base sm:text-[17px] text-slate-200 font-normal leading-[1.6] max-w-[520px]">
+              Building and managing strategic enterprises through disciplined capital management, technology innovation, and responsible corporate governance.
             </p>
 
-            {/* Two Action Buttons with clear white & metallic-gold styling */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            {/* 4. Action Buttons: Same horizontal row on desktop, equal height ~48px, 12-16px gap */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 pt-1">
               <button
                 onClick={onExploreBusinesses}
-                className="flex items-center gap-2 px-6 sm:px-7 py-3.5 text-xs font-bold uppercase tracking-wider text-[#101D35] bg-[#C5A46D] hover:bg-[#DFCA9E] rounded-md transition-all shadow-md cursor-pointer whitespace-nowrap active:scale-[0.98]"
+                className="h-12 min-h-[48px] px-6 sm:px-7 inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider text-[#101D35] bg-[#C5A46D] hover:bg-[#DFCA9E] rounded-lg transition-all shadow-md cursor-pointer whitespace-nowrap active:scale-[0.98]"
               >
                 <span>Explore Our Businesses</span>
                 <ArrowRight className="w-4 h-4 text-[#101D35]" />
@@ -204,7 +200,7 @@ export const CorporateHero: React.FC<CorporateHeroProps> = ({
 
               <button
                 onClick={onCorporateGovernance}
-                className="flex items-center gap-2 px-6 sm:px-7 py-3.5 text-xs font-bold uppercase tracking-wider text-white hover:text-[#C5A46D] bg-[#101D35]/90 hover:bg-[#1A2E50] border border-white/30 hover:border-[#C5A46D] rounded-md transition-all cursor-pointer whitespace-nowrap backdrop-blur-sm active:scale-[0.98]"
+                className="h-12 min-h-[48px] px-6 sm:px-7 inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider text-white hover:text-[#C5A46D] bg-[#101D35]/90 hover:bg-[#1A2E50] border border-white/30 hover:border-[#C5A46D] rounded-lg transition-all cursor-pointer whitespace-nowrap backdrop-blur-sm active:scale-[0.98]"
               >
                 <span>Corporate Governance</span>
               </button>
@@ -213,22 +209,22 @@ export const CorporateHero: React.FC<CorporateHeroProps> = ({
           </div>
 
           {/* ================================================================= */}
-          {/* Right Column: 58% imagery width — Pure visual focal point          */}
-          {/* Free of floating panels, fake numbers, and overlaid HTML text     */}
+          {/* Right Column: 55% imagery width — Preserved corporate visual       */}
+          {/* Full width within column, original aspect ratio, vertical center  */}
           {/* ================================================================= */}
-          <div className="w-full lg:w-[58%] relative">
-            <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] rounded-2xl overflow-hidden border border-[#C5A46D]/30 shadow-2xl bg-[#091527] group">
+          <div className="w-full lg:w-[55%] relative flex items-center justify-center">
+            <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] lg:aspect-[16/10] rounded-2xl overflow-hidden border border-[#C5A46D]/25 shadow-2xl bg-[#091527] group">
               
-              {/* Primary High-Resolution Architectural & AI Governance Artwork */}
+              {/* Preserved Glass HQ & Digital Globe Image */}
               <img
                 src={assetUrl('/images/corporate/hero_holding_ai_hq.jpg')}
                 alt="DESTRIA GROUP INC. Multinational Corporate Headquarters and AI-Assisted Intelligence Networks"
                 referrerPolicy="no-referrer"
-                className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                className="w-full h-full object-cover object-center transition-all duration-700 ease-out group-hover:scale-[1.01]"
                 loading="eager"
               />
 
-              {/* Edge vignetting for clean integration with navy canvas */}
+              {/* Edge subtle vignetting */}
               <div
                 className="absolute inset-0 bg-gradient-to-t from-[#0A1324]/40 via-transparent to-[#0A1324]/20 pointer-events-none"
                 aria-hidden="true"
@@ -240,7 +236,7 @@ export const CorporateHero: React.FC<CorporateHeroProps> = ({
                 aria-hidden="true"
               />
 
-              {/* Seamless canvas motion overlay for subtle network pulses */}
+              {/* Subtle seamless canvas motion overlay */}
               <canvas
                 ref={canvasRef}
                 className="absolute inset-0 w-full h-full pointer-events-none z-10"

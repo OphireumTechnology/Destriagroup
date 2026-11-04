@@ -13,7 +13,7 @@ export const Footer: React.FC<{ onOpenAuth: () => void }> = ({ onOpenAuth }) => 
 
   return (
     <footer className="bg-[#101D35] text-white border-t border-[#C5A46D]/30 pt-16 pb-12">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-14 border-b border-white/10">

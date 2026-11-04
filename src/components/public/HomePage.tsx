@@ -52,7 +52,7 @@ export const HomePage: React.FC<{ onOpenAuth: () => void }> = ({ onOpenAuth }) =
       {/* 2. FINANCIAL INTELLIGENCE: Disciplined Capital Management                 */}
       {/* ========================================================================= */}
       <section className="py-16 lg:py-24 bg-white border-b border-slate-200">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             
@@ -157,7 +157,7 @@ export const HomePage: React.FC<{ onOpenAuth: () => void }> = ({ onOpenAuth }) =
       {/* 3. ENTERPRISE MANAGEMENT: One Holding Company. Multiple Enterprises.       */}
       {/* ========================================================================= */}
       <section className="py-16 lg:py-24 bg-[#F8FAFC] border-b border-slate-200">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 space-y-12">
+        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           {/* Section Header */}
           <div className="max-w-3xl space-y-2">
@@ -244,7 +244,7 @@ export const HomePage: React.FC<{ onOpenAuth: () => void }> = ({ onOpenAuth }) =
       {/* 4. AI GOVERNANCE: Intelligent Governance. Responsible Decisions.           */}
       {/* ========================================================================= */}
       <section className="py-16 lg:py-24 bg-white border-b border-slate-200">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 space-y-12">
+        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="max-w-3xl space-y-2">
             <span className="text-xs font-bold uppercase tracking-widest text-[#C5A46D] block">
@@ -348,7 +348,7 @@ export const HomePage: React.FC<{ onOpenAuth: () => void }> = ({ onOpenAuth }) =
       {/* 5. STATUTORY CORPORATE PROFILE & ENTERPRISE PORTAL ACCESS                 */}
       {/* ========================================================================= */}
       <section className="py-16 lg:py-20 bg-[#F8FAFC] border-b border-slate-200">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
             <div className="h-1.5 w-full bg-gradient-to-r from-[#9E7D47] via-[#DFCA9E] to-[#C5A46D]" />

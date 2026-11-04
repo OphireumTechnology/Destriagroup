@@ -36,6 +36,18 @@ export const LegalPage: React.FC = () => {
           </p>
         </div>
 
+        {/* Regulatory Intelligence & Corporate Compliance Visual */}
+        <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-900 aspect-[21/9] sm:aspect-[16/7]">
+          <img
+            src={assetUrl('/images/corporate/legal_regulatory_compliance.jpg')}
+            alt="Corporate Legal Secretariat and Statutory Compliance Executive Office"
+            referrerPolicy="no-referrer"
+            className="w-full h-full object-cover object-center"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A1324]/60 via-transparent to-transparent pointer-events-none" />
+        </div>
+
         {/* Legal Charter Visual Diagram */}
         <div className="bg-[#081220] p-4 sm:p-6 rounded-2xl border border-[#C5A46D]/30 shadow-lg overflow-hidden">
           <div className="mb-4 flex items-center justify-between">

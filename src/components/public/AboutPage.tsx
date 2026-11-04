@@ -38,6 +38,18 @@ export const AboutPage: React.FC = () => {
           </p>
         </div>
 
+        {/* Executive Headquarters & Leadership Visual */}
+        <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-900 aspect-[21/9] sm:aspect-[16/7]">
+          <img
+            src={assetUrl('/images/corporate/about_corporate_foundation.jpg')}
+            alt="DESTRIA GROUP INC. Executive Boardroom and Corporate Leadership Foundation"
+            referrerPolicy="no-referrer"
+            className="w-full h-full object-cover object-center"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A1324]/60 via-transparent to-transparent pointer-events-none" />
+        </div>
+
         {/* Core Identity & Classification Matrix */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           

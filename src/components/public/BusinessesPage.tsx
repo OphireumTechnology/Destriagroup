@@ -56,6 +56,18 @@ export const BusinessesPage: React.FC = () => {
           </p>
         </div>
 
+        {/* Portfolio Architecture & Interconnected Industries Visual */}
+        <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-900 aspect-[21/9] sm:aspect-[16/7]">
+          <img
+            src={assetUrl('/images/corporate/businesses_portfolio_network.jpg')}
+            alt="Interconnected Industrial Enterprises, Clean Energy, and Manufacturing Network"
+            referrerPolicy="no-referrer"
+            className="w-full h-full object-cover object-center"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A1324]/60 via-transparent to-transparent pointer-events-none" />
+        </div>
+
         {/* Capital Allocation & Subsidiary Oversight Diagram */}
         <div className="bg-[#0A1628] p-4 sm:p-6 rounded-2xl border border-[#C5A46D]/30 shadow-lg overflow-hidden">
           <div className="mb-4 flex items-center justify-between">

@@ -58,6 +58,18 @@ export const ContactPage: React.FC = () => {
           </p>
         </div>
 
+        {/* Corporate Headquarters & Executive Seat Visual */}
+        <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-900 aspect-[21/9] sm:aspect-[16/7]">
+          <img
+            src={assetUrl('/images/corporate/contact_executive_seat.jpg')}
+            alt="DESTRIA GROUP INC. Corporate Executive Headquarters in Sheridan Wyoming"
+            referrerPolicy="no-referrer"
+            className="w-full h-full object-cover object-center"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A1324]/60 via-transparent to-transparent pointer-events-none" />
+        </div>
+
         {/* Executive Secretariat Visual Diagram */}
         <div className="bg-[#081426] p-4 sm:p-6 rounded-2xl border border-[#C5A46D]/30 shadow-lg overflow-hidden">
           <div className="mb-4 flex items-center justify-between">

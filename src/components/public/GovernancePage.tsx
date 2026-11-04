@@ -40,6 +40,18 @@ export const GovernancePage: React.FC = () => {
           </p>
         </div>
 
+        {/* AI-Assisted Governance & Human Oversight Visual Banner */}
+        <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-900 aspect-[21/9] sm:aspect-[16/7]">
+          <img
+            src={assetUrl('/images/corporate/governance_ai_oversight.jpg')}
+            alt="Corporate Governance Center with Dual-Authorization and Fiduciary Decision Support"
+            referrerPolicy="no-referrer"
+            className="w-full h-full object-cover object-center"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A1324]/60 via-transparent to-transparent pointer-events-none" />
+        </div>
+
         {/* Governance Pillars Matrix */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           
